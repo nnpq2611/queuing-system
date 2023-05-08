@@ -1,0 +1,15 @@
+.menu-bar{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05);
+    position: fixed;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    overflow: auto;
+}
+
+.menu-bar img{
+    padding: 30px 55px 30px 55px;
+    width: 100px;
+}

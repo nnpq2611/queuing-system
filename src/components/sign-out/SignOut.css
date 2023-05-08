@@ -1,0 +1,14 @@
+.sign-out .ant-btn {
+    margin-left: 30px;
+    width: 180px;
+    color: #FF7506;
+    border-color: #FFF2E7;
+    background-color: #FFF2E7;
+    margin-top: 280px;
+}
+
+.sign-out .ant-btn:hover {
+    color: #fff;
+    border-color: #FF7506;
+    background-color: #FF7506;;
+}

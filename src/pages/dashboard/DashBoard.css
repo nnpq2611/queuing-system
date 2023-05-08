@@ -1,0 +1,23 @@
+.dash-board-page{
+    padding-left: 17%;
+    display: flex;
+    background-color: #f5f5f5;
+}
+
+.dash-board-page h2{
+    color: #FF7506;
+}
+
+.dash-board-page .chart{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* .dash-board-page .overview{
+    width: 50%;
+    background-color: #ffff;
+    padding: 7px 20px 7px 20px;
+    margin-left: 10px;
+    margin-right: 0;
+} */

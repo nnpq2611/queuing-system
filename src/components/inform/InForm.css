@@ -1,0 +1,13 @@
+.in-form .anticon{
+    color: #FFAC6A;
+    background-color: #FFF2E7;
+    font-size: 22px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.in-form .anticon:hover{
+    color: #fff;
+    background-color: #FF7506;
+}

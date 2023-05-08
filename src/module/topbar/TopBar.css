@@ -1,0 +1,22 @@
+.top-bar{
+    padding-left: 17%;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar h3{
+    color: #FF7506;
+}
+
+.top-bar ul{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.top-bar ul li{
+    margin-left: 10px;
+}
+
