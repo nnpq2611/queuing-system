@@ -4,7 +4,7 @@ import { DatePicker, Select, Space} from 'antd';
 
 const { Option } = Select;
 
-type PickerType = 'time' | 'date';
+type PickerType = 'date';
 
 const PickerWithType = ({
   type,
@@ -18,7 +18,7 @@ const PickerWithType = ({
 };
 
 const DatePickerm = () => {
-  const [type, setType] = useState<PickerType>('time');
+  const [type, setType] = useState<PickerType>('date');
 
   return (
     <div>
