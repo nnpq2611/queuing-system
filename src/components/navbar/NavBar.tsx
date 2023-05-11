@@ -50,9 +50,9 @@ const NavBar = () => {
   ];
 
   const subMenuItems = [
-    { key: "role", title: "Quản lý vai trò", path: "/role" },
-    { key: "account", title: "Quản lý tài khoản", path: "/account" },
-    { key: "user", title: "Quản lý người dùng", path: "/user" },
+    { key: "role", title: "Quản lý vai trò", path: "/role_management" },
+    { key: "account", title: "Quản lý tài khoản", path: "/account_management" },
+    { key: "user", title: "Quản lý người dùng", path: "/user_management" },
   ];
 
   return (

@@ -1,11 +1,15 @@
-import React from 'react'
-import './DashBoard.css'
-import StatusCard from '../../components/status-card/StatusCard'
-import { CalendarOutlined, CarryOutOutlined, UserSwitchOutlined, FileExcelOutlined } from '@ant-design/icons';
-import AreaChart from '../../components/areachart/AreaChart';
-import DatePickerm from '../../components/date-picker/DatePicker';
-
-
+import React from "react";
+import "./DashBoard.css";
+import StatusCard from "../../components/status-card/StatusCard";
+import {
+  CalendarOutlined,
+  CarryOutOutlined,
+  UserSwitchOutlined,
+  FileExcelOutlined,
+} from "@ant-design/icons";
+import AreaChart from "../../components/areachart/AreaChart";
+import DatePickerm from "../../components/date-picker/DatePicker";
+import { Col, Row } from "antd";
 
 const DashBoard = () => {
   const [dataChart, setDataChart] = React.useState([0, 0, 0, 0, 0, 0, 0]);
@@ -33,39 +37,36 @@ const DashBoard = () => {
   ];
 
   return (
-    <div className='dash-board-page'>
-      <div className='dash-board'>
-        <h2>Biểu đồ cấp</h2>
-        <div className="col-6" style={{display: "flex"}}>
-        {
-          data.map((item, index) => (
+    <div className="dash-board-page">
+      <Row>
+        <Col span={17} className="dash-board">
+          <h3>DashBoard</h3>
+          <h2>Biểu đồ cấp số</h2>
+          <div className="col-6" style={{ display: "flex" }}>
+            {data.map((item, index) => (
               <div className="col-6" key={index}>
-                  <StatusCard
-                      icon={item.icon}
-                      count={item.count}
-                      title={item.name}
-                  />
+                <StatusCard
+                  icon={item.icon}
+                  count={item.count}
+                  title={item.name}
+                />
               </div>
-          ))
-        }
-        </div>
+            ))}
+          </div>
 
-        <div className="chart">
-          <h3>Bảng thống kê theo ngày</h3>
-          <DatePickerm/>
-          <AreaChart data={dataChart} />
-        </div>
-      </div>
+          <div className="chart">
+            <h3>Bảng thống kê theo ngày</h3>
+            <DatePickerm />
+            <AreaChart data={dataChart} />
+          </div>
+        </Col>
 
-      <div className='overview'>
-        {/* <h2>Tổng quan</h2> */}
-
-      </div>
-
-      
+        <Col span={7} className="overview">
+          <h2>Tổng quan</h2>
+        </Col>
+      </Row>
     </div>
-    
-  )
-}
+  );
+};
 
-export default DashBoard
+export default DashBoard;

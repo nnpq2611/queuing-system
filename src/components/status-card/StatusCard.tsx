@@ -2,15 +2,15 @@ import React from 'react'
 import './StatusCard.css'
 
 
-const StatusCard = (item:any) => {
+const StatusCard: React.FC<{icon: any, count: number, title: string}> = ({icon, count, title}) => {
   return (
     <div className='status-card'>
         <div className="status-card__icon">
-            <i className={item.icon}></i>
-            <span>{item.name}</span>
+            {icon}
+            <span>{title}</span>
         </div>
         <div className="status-card__count">
-            <h4>{item.count}</h4>
+            <h4>{count}</h4>
         </div>
     </div>
   )

@@ -1,28 +1,23 @@
 import React from 'react'
 import './TopBar.css'
 import InForm from '../../components/inform/InForm'
-import img from '../../assets/img/unsplash_Fyl8sMC2j2Q.png'
+import User from '../../components/user/User'
 
 
 const TopBar = () => {
-  return (
-    <div className='top-bar'>
-        <h3>Dashboard</h3>
-        <ul>
-            <li>
-                <InForm />
-            </li>
-            <li>
-                <img src={img} alt="img" />
-            </li>
-            <li>
+    
+
+    return (
+        <div className='top-bar'>
+            <InForm/>
+            <User/>
+            <div className='user-name'>
                 <p>Xin chào</p>
                 <h4>Nguyễn Thị Thùy Dung</h4>
-            </li>
-        </ul>
+            </div>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default TopBar
