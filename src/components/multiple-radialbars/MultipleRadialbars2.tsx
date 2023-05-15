@@ -2,11 +2,11 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 
-const MultipleRadialbars = () => {
-  const series = [94, 6];
+const MultipleRadialbars2 = () => {
+  const series = [74, 20, 6];
   const options: ApexOptions = {
     chart: {
-      height: "auto",
+      height: 350,
       type: "radialBar",
     },
     plotOptions: {
@@ -30,11 +30,11 @@ const MultipleRadialbars = () => {
         },
       },
     },
-    labels: ["Đang hoạt động", "Ngưng hoạt động"],
+    labels: ["Đã sử dụng", "Đang chờ", "Bỏ qua"],
     legend: {
       show: false,
       floating: true,
-      fontSize: "5px",
+      fontSize: "16px",
       position: "left",
       offsetX: 160,
       offsetY: 10,
@@ -46,12 +46,12 @@ const MultipleRadialbars = () => {
         return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
       },
       itemMargin: {
-        vertical: 1,
+        vertical: 3,
       },
     },
     responsive: [
       {
-        breakpoint: 400,
+        breakpoint: 480,
         options: {
           legend: {
             show: false,
@@ -64,7 +64,7 @@ const MultipleRadialbars = () => {
       lineCap: "round",
     },
 
-    colors: ["#FF7506", "#7E7D88"],
+    colors: ["#35C75A", "#7E7D88", "#F178B6"],
 
     fill: {
       type: "gradient",
@@ -72,13 +72,14 @@ const MultipleRadialbars = () => {
         shade: "dark",
         type: "horizontal",
         shadeIntensity: 0.5,
-        gradientToColors: ["#FF7506", "#7E7D88"],
+        gradientToColors: ["#35C75A", "#7E7D88", "#F178B6"],
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
         stops: [0, 100],
       },
     },
+
   };
 
   return (
@@ -91,4 +92,4 @@ const MultipleRadialbars = () => {
   );
 };
 
-export default MultipleRadialbars;
+export default MultipleRadialbars2;

@@ -1,0 +1,12 @@
+.navbar .ant-menu .ant-menu-item-selected{
+    background-color: #FF7506;
+    color: #fff;
+}
+
+.navbar .ant-menu .ant-menu-submenu-selected{
+    background-color: #FF7506;
+}
+
+.navbar .ant-menu .ant-menu-submenu-selected > .ant-menu-submenu-title{
+    color: #fff;
+}

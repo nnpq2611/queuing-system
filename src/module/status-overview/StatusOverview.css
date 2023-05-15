@@ -1,0 +1,36 @@
+.status-overview {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.5s ease 0s;
+    background-color: #fff; 
+    display: flex; 
+    margin: 10px 30px 10px 0;
+    align-items: center;
+}
+
+.status-overview .overview_count span{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.status-overview .overview_count .overview_title .anticon-desktop{
+    font-size: 1rem;
+    padding-right: 8px;
+    color: #FFAC6A;    
+}
+
+.status-overview .overview_count .overview_title .anticon-comment{
+    font-size: 1rem;
+    padding-right: 8px;
+    color: #4277FF;
+}
+
+.status-overview .overview_count .overview_title .anticon-number{
+    font-size: 1rem;
+    padding-right: 8px;
+    color: #35C75A;    
+}

@@ -1,0 +1,132 @@
+{
+    "device": [
+        {
+            "Ma_thiet_bi": "KIO_01",
+            "Ten_thiet_bi": "Kiosk",
+            "Dia_chi_IP": "128.172.308",
+            "Loai_thiet_bi": "Kiosk",
+            "Ten_dang_nhap": "Linhkyo011",
+            "Mat_khau": "123456",
+            "Dich_vu_su_dung": "Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát."
+        },
+        {
+            "Ma_thiet_bi": "KIO_01",
+            "Ten_thiet_bi": "Kiosk",
+            "Dia_chi_IP": "128.172.309",
+            "Loai_thiet_bi": "Kiosk",
+            "Ten_dang_nhap": "quynhnnp011",
+            "Mat_khau": "123457",
+            "Dich_vu_su_dung": "Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát."
+        }
+    ],
+    "service": [
+        {
+            "Thong_tin_dich_vu": {
+                "Ma_dich_vu": 201,
+                "Ten_dich_vu": "Khám tim mạch",
+                "Mo_ta": "Chuyên các bệnh lý về tim"
+            },
+            "Quy_tac_cap_so": {
+                "Tang_tu_dong": {
+                    "Start": 1,
+                    "End": 99999
+                },
+                "Prefix": 1,
+                "Surfix": 1,
+                "Reset": true
+            }
+        },
+        {
+            "Thong_tin_dich_vu": {
+                "Ma_dich_vu": 202,
+                "Ten_dich_vu": "Khám tai mũi họng",
+                "Mo_ta": "Chuyên các bệnh lý về tai mũi họng"
+            },
+            "Quy_tac_cap_so": {
+                "Tang_tu_dong": {
+                    "Start": 1,
+                    "End": 99999
+                },
+                "Prefix": 1,
+                "Surfix": 0,
+                "Reset": false
+            }
+        }
+    ],
+    "report": [
+        {
+            "Ho_ten": "Nguyễn Thị Dung",
+            "Ten_dich_vu": "Khám tim mạch",
+            "So_thu_tu": 2001201,
+            "Thoi_gian_cap": "14:35 - 07/05/2023",
+            "Han_su_dung": "18:00 - 07/05/2023",
+            "Nguon_cap": "Kiosk",
+            "Trang_thai": "Đang chờ",
+            "So_dien_thoai": "0948523623",
+            "Email": "nguyendung@gmail.com"
+        },
+        {
+            "Ho_ten": "Nguyễn Ngọc Phương Quỳnh",
+            "Ten_dich_vu": "Khám tai mũi họng",
+            "So_thu_tu": 2001202,
+            "Thoi_gian_cap": "14:35 - 07/05/2023",
+            "Han_su_dung": "18:00 - 07/05/2023",
+            "Nguon_cap": "Kiosk",
+            "Trang_thai": "Đã sử dụng",
+            "So_dien_thoai": "0948523626",
+            "Email": "nnpquynh01vvk@gmail.com"
+        }
+    ],
+    "role": [
+        {
+            "Ten_vai_tro": "Admin",
+            "Mo_ta": "Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu",
+            "Phan_quyen": {
+                "A": [
+                    {
+                        "Chuc_nang_x": "false"
+                    },
+                    {
+                        "Chuc_nang_y": "false"
+                    },
+                    {
+                        "Chuc_nang_z": "false"
+                    }
+                ],
+                "B": [
+                    {
+                        "Chuc_nang_x": "true"
+                    },
+                    {
+                        "Chuc_nang_y": "true"
+                    },
+                    {
+                        "Chuc_nang_z": "true"
+                    }
+                ]
+            }
+        }
+    ],
+    "account": [
+        {
+            "Ho_ten": "Nguyễn Thị Dung",
+            "So_dien_thoai": "0948523623",
+            "Email": "nguyendung@gmail.com",
+            "Ten_vai_tro": "Admin",
+            "Ten_dang_nhap": "nguyendung",
+            "Mat_khau": "123456",
+            "Tinh_trang": true
+        },
+        {
+            "Ho_ten": "Nguyễn Ngọc Phương Quỳnh",
+            "So_dien_thoai": "0948523626",
+            "Email": "nnpquynh01vvk@gmail.com",
+            "Ten_vai_tro": "Admin",
+            "Ten_dang_nhap": "quynhnnp011",
+            "Mat_khau": "123457",
+            "Tinh_trang": false
+        }
+
+
+    ]
+}

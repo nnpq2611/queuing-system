@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import DashBoard from "../pages/dashboard/DashBoard";
 import UserName from "../pages/user/UserName";
-// import Device from "../pages/device/Device";
+import Device from "../pages/device/Device";
 // import Service from "../pages/service/Service";
 // import Progression from "../pages/progression/Progression";
 // import Report from "../pages/report/Report";
@@ -14,7 +14,7 @@ const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<DashBoard/>} />
-      {/* <Route path="/device" element={<Device />} /> */}
+      <Route path="/device" element={<Device />} />
       {/* <Route path="/service" element={<Service />} /> */}
       {/* <Route path="/progression" element={<Progression />} /> */}
       {/* <Route path="/report" element={<Report />} /> */}
