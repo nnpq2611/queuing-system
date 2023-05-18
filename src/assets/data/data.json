@@ -7,7 +7,9 @@
             "Loai_thiet_bi": "Kiosk",
             "Ten_dang_nhap": "Linhkyo011",
             "Mat_khau": "123456",
-            "Dich_vu_su_dung": "Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát."
+            "Dich_vu_su_dung": "Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.", 
+            "Trang_thai_hoat_dong": "Hoạt động",
+            "Trang_thai_ket_noi": "Kết nối"
         },
         {
             "Ma_thiet_bi": "KIO_01",
@@ -16,7 +18,9 @@
             "Loai_thiet_bi": "Kiosk",
             "Ten_dang_nhap": "quynhnnp011",
             "Mat_khau": "123457",
-            "Dich_vu_su_dung": "Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát."
+            "Dich_vu_su_dung": "Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.",
+            "Trang_thai_hoat_dong": "Ngưng hoạt động",
+            "Trang_thai_ket_noi": "Mất kết nối"
         }
     ],
     "service": [
@@ -24,7 +28,8 @@
             "Thong_tin_dich_vu": {
                 "Ma_dich_vu": 201,
                 "Ten_dich_vu": "Khám tim mạch",
-                "Mo_ta": "Chuyên các bệnh lý về tim"
+                "Mo_ta": "Chuyên các bệnh lý về tim",
+                "Trang_thai_hoat_dong":"Hoạt động"
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
@@ -40,7 +45,8 @@
             "Thong_tin_dich_vu": {
                 "Ma_dich_vu": 202,
                 "Ten_dich_vu": "Khám tai mũi họng",
-                "Mo_ta": "Chuyên các bệnh lý về tai mũi họng"
+                "Mo_ta": "Chuyên các bệnh lý về tai mũi họng",
+                "Trang_thai_hoat_dong":"Ngưng hoạt động"
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {

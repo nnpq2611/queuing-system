@@ -1,25 +1,32 @@
-.table{
-    border-collapse: collapse;
-    width: 100%;
+.table table{
+    width: 110%;
     border-radius: 20px 20px 0 0;
+    margin-right: 20px;
 }
 
-.table .tr:nth-child(even){
-    background-color: #fff;
+.table table tr:nth-child(odd){
+    background-color: #fff;  
 }
 
-.table .tr:nth-child(odd){
-    background-color: #FFF2E7;
+.table table tr:nth-child(even){
+    background-color: #FFF2E7;  
 }
 
-.table th{
+.table table th{
     background-color: #FF9138;
     color: #fff;
     height: 40px;
     padding: 0 20px 0 20px;
 }
 
-.table td{
+.table table td{
     height: 40px;
     padding: 0 20px 0 20px;
 }
+
+.table .pagination {
+    float: right;
+    margin: 20px 0 20px 0;
+}
+
+

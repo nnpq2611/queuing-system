@@ -6,6 +6,7 @@ import { SearchOutlined } from '@ant-design/icons';
 import DeviceTable from '../../module/Table/DeviceTable';
 import database from '../../firebase/FireBase';
 import { get, ref } from "firebase/database";
+import ButtonDevice from '../../components/button-device/ButtonDevice';
 
 interface device {
   Ma_thiet_bi: string,
@@ -15,9 +16,12 @@ interface device {
   Ten_dang_nhap: string,
   Mat_khau: string,
   Dich_vu_su_dung: string,
+  Trang_thai_hoat_dong: string,
+  Trang_thai_ket_noi: string,
 }
 
 const Device = () => {
+  const [packed, setPacked] = useState(true);
   const [active, setActive] = React.useState('Tất cả');
   const [searchInput, setSearchInput] = useState("");
   const [device, setDevice] = useState<device[]>([]);
@@ -46,63 +50,83 @@ const Device = () => {
 
   }, []);
 
+  const handleChangePacked = () => {
+    setPacked(!packed);
+  };
+
+  const handleSearch = (value: string) => {
+    setSearchInput(value);
+    if (packed) {
+      if (value === "") {
+        return setDevice_show(device);
+      }
+      const search = device.filter((item) => {
+        return item.Ma_thiet_bi.includes(searchInput);
+      });
+      setDevice_show(search);
+    } 
+  };
+
   return (
     <Row className='device-page'>
-        <Col className="device">
-          <div className='nav-dev'>
-            <h3 className='dev'>Thiết bị &gt; </h3>
-            <h3 className='dev-list'>Danh sách thiết bị</h3>
-          </div>
-          <h2>Danh sách thiết bị</h2>
-          <div className='device-list'>
-            <div className='active-status'>
-              <h4>Trạng thái hoạt động</h4>
-              <Space wrap>
-                <Select
-                  defaultValue="Tất cả"
-                  style={{ width: 280 }}
-                  onChange={handleChange}
-                  value={active}
-                  options={[
-                    { value: 'Tất cả', label: 'Tất cả' },
-                    { value: 'Hoạt động', label: 'Hoạt động' },
-                    { value: 'Ngưng hoạt động', label: 'Ngưng hoạt động' },
-                  ]}
-                />
-              </Space>
-              
-            </div>
-            <div className='connection-status'>
-              <h4>Trạng thái kết nối</h4>
-              <Space wrap>
-                <Select
-                  defaultValue="Tất cả"
-                  style={{ width: 280 }}
-                  onChange={handleChange}
-                  value={active}
-                  options={[
-                    { value: 'Tất cả', label: 'Tất cả' },
-                    { value: 'Kết nối', label: 'Kết nối' },
-                    { value: 'Mất kết nối', label: 'Mất kết nối' },
-                  ]}
-                />
-              </Space>            
-            </div>
-            <div className='key-word'>
-              <h4>Từ khóa</h4>
-              <Input
-                className="form-control"
+      <Col className="device">
+        <div className='nav-dev'>
+          <h3 className='dev'>Thiết bị &gt; </h3>
+          <h3 className='dev-list'>Danh sách thiết bị</h3>
+        </div>
+        <h2>Danh sách thiết bị</h2>
+        <div className='device-list'>
+          <div className='active-status'>
+            <h4>Trạng thái hoạt động</h4>
+            <Space wrap>
+              <Select
+                defaultValue="Tất cả"
                 style={{ width: 280 }}
-                placeholder="Nhập từ khóa"
-                value={searchInput}
-                suffix={<SearchOutlined />}
+                onChange={handleChange}
+                value={active}
+                options={[
+                  { value: 'Tất cả', label: 'Tất cả' },
+                  { value: 'Hoạt động', label: 'Hoạt động' },
+                  { value: 'Ngưng hoạt động', label: 'Ngưng hoạt động' },
+                ]}
               />
-            </div>
+            </Space>
+            
           </div>
+          <div className='connection-status'>
+            <h4>Trạng thái kết nối</h4>
+            <Space wrap>
+              <Select
+                defaultValue="Tất cả"
+                style={{ width: 280 }}
+                onChange={handleChange}
+                value={active}
+                options={[
+                  { value: 'Tất cả', label: 'Tất cả' },
+                  { value: 'Kết nối', label: 'Kết nối' },
+                  { value: 'Mất kết nối', label: 'Mất kết nối' },
+                ]}
+              />
+            </Space>            
+          </div>
+          <div className='key-word'>
+            <h4>Từ khóa</h4>
+            <Input
+              className="form-control"
+              style={{ width: 280 }}
+              placeholder="Nhập từ khóa"
+              onChange={(e) => handleSearch(e.target.value)}
+              value={searchInput}
+              suffix={<SearchOutlined />}
+            />
+          </div>
+        </div>
+        <div className='table-device'>
           <DeviceTable device_show = {device_show}/>
-        </Col>
-        <Col className='btn-add-device'>
-        </Col>
+          <ButtonDevice/>
+        </div>
+      </Col>
+      
 
     </Row>
   )

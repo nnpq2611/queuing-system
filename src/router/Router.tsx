@@ -3,7 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import DashBoard from "../pages/dashboard/DashBoard";
 import UserName from "../pages/user/UserName";
 import Device from "../pages/device/Device";
-// import Service from "../pages/service/Service";
+import AddDevice from "../pages/device/add-device/AddDevice";
+import Service from "../pages/service/Service";
 // import Progression from "../pages/progression/Progression";
 // import Report from "../pages/report/Report";
 // import RoleManagement from "../pages/role_management/RoleManagement";
@@ -15,7 +16,8 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<DashBoard/>} />
       <Route path="/device" element={<Device />} />
-      {/* <Route path="/service" element={<Service />} /> */}
+      <Route path="/adddevice" element={<AddDevice />} />
+      <Route path="/service" element={<Service />} />
       {/* <Route path="/progression" element={<Progression />} /> */}
       {/* <Route path="/report" element={<Report />} /> */}
       {/* <Route path="/role_management" element={<RoleManagement />} /> */}

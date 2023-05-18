@@ -44,3 +44,7 @@
 .apexcharts-radialbar-track{
     background-color: #FF7506 !important;
 }
+
+.device-page .table-device{
+    display: flex;
+}

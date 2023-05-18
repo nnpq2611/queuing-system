@@ -1,0 +1,31 @@
+.button-device_add{
+    background-color: #FFF2E7;
+    width: 80px;
+    height: 120px;
+    float: right;
+    border-radius: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+    text-align: center;
+}
+
+.button-device_add .button-device_add-icon{
+    color: #FFFF;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #FF9138;
+    border-radius: 10px;
+}
+
+
+.button-device_add .button-device_add-name{
+    color: #FF9138;
+    font-size: 1rem;
+    font-weight: bold;
+    align-items: center;
+    
+}

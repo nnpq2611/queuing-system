@@ -13,7 +13,7 @@ const User = () => {
     return (
         <div className='user'>
             {user.map((item, index) => (
-                <Link to={item.path}><img src={img} alt="img" /></Link>  
+                <Link to={item.path} key={index}><img src={img} alt="img" /></Link>  
             ))}
         </div>
     )
