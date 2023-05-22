@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Table.css";
 import { Pagination } from "antd";
+import { Link } from "react-router-dom";
 
 interface device {
   Ma_thiet_bi: string;
@@ -56,10 +57,10 @@ const DeviceTable: React.FC<{ device_show: device[] }> = ({ device_show }) => {
         </td>
       )}
       <td>
-        <a href="/detail-device">Chi tiết</a>
+        <Link to={`/detail-device/${index}`}>Chi tiết</Link>
       </td>
       <td>
-        <a href="/update-device">Cập nhật</a>
+        <Link to={`/update-device/${index}`}>Cập nhật</Link>
       </td>
     </tr>
   );

@@ -1,13 +1,27 @@
 import React, {useState} from 'react'
 import "./Table.css"
 import { Pagination } from "antd";
+import { Link } from "react-router-dom";
 
-interface service{
-    Ma_dich_vu: string;
-    Ten_dich_vu:string;
-    Mo_ta: string;
-    Trang_thai_hoat_dong: string;
+interface service {
+    Thong_tin_dich_vu: {
+        Ma_dich_vu: string,
+        Ten_dich_vu: string,
+        Mo_ta: string,
+        Trang_thai_hoat_dong: string,
+    },
+    Quy_tac_cap_so: {
+        Tang_tu_dong: {
+            Start: number,
+            End: number,
+        },
+        Prefix: number,
+        Surfix: number,
+        Reset: boolean,
+    }
 }
+
+
 
 const service_list = [
     "Mã dịch vụ",
@@ -25,15 +39,15 @@ const ServiceTable: React.FC<{ service_show: service[] }> = ({ service_show }) =
 
     const renderBody = (item: any, index: any) => (
         <tr key={index}>
-            <td>{item.Ma_dich_vu}</td>
-            <td>{item.Ten_dich_vu}</td>
-            <td>{item.Mo_ta}</td>
-            <td>{item.Trang_thai_hoat_dong}</td>
+            <td>{item.Thong_tin_dich_vu.Ma_dich_vu}</td>
+            <td>{item.Thong_tin_dich_vu.Ten_dich_vu}</td>
+            <td>{item.Thong_tin_dich_vu.Mo_ta}</td>
+            <td>{item.Thong_tin_dich_vu.Trang_thai_hoat_dong}</td>
             <td>
-                <a href="/detail-device">Chi tiết</a>
+                <Link to={`/detail-serice/${index}`}>Chi tiết</Link>
             </td>
             <td>
-                <a href="/update-device">Cập nhật</a>
+                <Link to={`/update-serice/${index}`}>Cập nhật</Link>
             </td>
         </tr>
     )
@@ -44,6 +58,7 @@ const ServiceTable: React.FC<{ service_show: service[] }> = ({ service_show }) =
           extend: false,
         }));
         setDataShow(devices.slice(0, 10));
+        console.log(dataShow)
       }, [service_show]);
     
       const selectPage = (page: any) => {

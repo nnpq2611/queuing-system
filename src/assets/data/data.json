@@ -26,10 +26,12 @@
     "service": [
         {
             "Thong_tin_dich_vu": {
-                "Ma_dich_vu": 201,
+                "Ma_dich_vu": "KIO_01",
                 "Ten_dich_vu": "Khám tim mạch",
                 "Mo_ta": "Chuyên các bệnh lý về tim",
-                "Trang_thai_hoat_dong":"Hoạt động"
+                "Trang_thai_hoat_dong":"Hoạt động",
+                "Thoi_gian_cap": "14:35 - 07/05/2023",
+                "Han_su_dung": "18:00 - 07/05/2023"
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
@@ -43,10 +45,12 @@
         },
         {
             "Thong_tin_dich_vu": {
-                "Ma_dich_vu": 202,
+                "Ma_dich_vu": "KIO_01",
                 "Ten_dich_vu": "Khám tai mũi họng",
                 "Mo_ta": "Chuyên các bệnh lý về tai mũi họng",
-                "Trang_thai_hoat_dong":"Ngưng hoạt động"
+                "Trang_thai_hoat_dong":"Ngưng hoạt động",
+                "Thoi_gian_cap": "14:35 - 07/05/2023",
+                "Han_su_dung": "18:00 - 07/05/2023"
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
@@ -59,7 +63,7 @@
             }
         }
     ],
-    "report": [
+    "progression": [
         {
             "Ho_ten": "Nguyễn Thị Dung",
             "Ten_dich_vu": "Khám tim mạch",

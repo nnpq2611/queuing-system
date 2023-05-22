@@ -1,7 +1,5 @@
 .table table{
-    width: 110%;
-    border-radius: 20px 20px 0 0;
-    margin-right: 20px;
+    width: 1100px;
 }
 
 .table table tr:nth-child(odd){

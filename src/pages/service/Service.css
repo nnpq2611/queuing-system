@@ -35,3 +35,15 @@
 .service-page .service-list .time{
     margin-right: 200px;
 }
+
+.service-page .service-list .time .date{
+    width: 148px;
+}
+
+.service-page .service-list .time .date .ant-picker-suffix{
+    color: #FF7506;
+}
+
+.service-page .table-service{
+    display: flex;
+}

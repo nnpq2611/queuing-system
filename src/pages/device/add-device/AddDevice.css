@@ -16,11 +16,11 @@
 }
 
 .add-device-page .add-device .nav-add .dev{
-    color: #FF7506;
+    color: #7E7D88;
 }
 
 .add-device-page .add-device .nav-add .add-dev{
-    color: #7E7D88;
+    color: #FF7506;
 }
 
 .add-device-page .add-device .add-list{
@@ -42,10 +42,6 @@
 .add-device-page .add-device .add-list .add-list-dev input{
     width:  500px;
     border-radius: 5px;
-}
-
-.add-device-page .add-device .add-list .add-list-dev .ant-select{
-    width:  500px;
 }
 
 .add-device-page .add-device .add-list .add-list-dev .add-list__input{

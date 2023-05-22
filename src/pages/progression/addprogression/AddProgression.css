@@ -1,0 +1,75 @@
+.add-progression-page{
+    display: flex;
+    margin-left: 15%;
+    background-color: #f5f5f5;
+    height: 800px;
+}
+
+.add-progression-page .add-progression{
+    padding:0 20px 0 20px;
+}
+
+.add-progression-page .add-progression .nav-add{
+    display: flex;
+    align-items: center;    
+    padding: 20px 0 10px 0;
+}
+
+.add-progression-page .add-progression .nav-add .pro{
+    color: #7E7D88;
+}
+
+.add-progression-page .add-progression .nav-add .add-pro{
+    color: #FF7506;
+}
+
+.add-progression-page .add-progression .add-list{
+    background-color: #fff;
+    padding: 20px 20px 30px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    width: 1200px;
+    height: 500px;
+    text-align: center;
+}
+
+.add-progression-page .add-progression .add-list h1{
+    color: #FF7506;
+    margin-bottom: 30px;
+}
+
+.add-progression-page .add-progression .add-list h3{
+    color: #7E7D88;
+    margin-bottom: 20px;
+}
+
+.add-progression-page .add-progression .add-list__button{
+    margin: 100px 400px 0 400px;
+}
+
+.add-progression-page .add-progression .add-list__button .add-list__button-cancel{
+    width: 110px;
+    height: 35px;
+    background-color: #FFF2E7;
+    color: #FF9138;
+    border: 1px solid #FF9138;
+    margin-right: 30px;
+}
+
+.add-progression-page .add-progression .add-list__button .add-list__button-cancel:hover{
+    background-color: #FF9138;
+    color: #ffff;
+}
+
+.add-progression-page .add-progression .add-list__button .add-list__button-add-progression{
+    width: 110px;
+    height: 35px;
+    background-color: #FF9138;
+    color: #ffff;
+}
+
+.add-progression-page .add-progression .add-list__button .add-list__button-add-progression:hover{
+    background-color: #FFF2E7;
+    color: #FF9138;
+    border: 1px solid #FF9138;
+}
