@@ -1,0 +1,39 @@
+.account-page{
+    display: flex;
+    margin-left: 15%;
+    background-color: #f5f5f5;
+    height: 800px;
+}
+
+.account-page .account_management {
+    padding:0 20px 0 20px;
+}
+
+.account-page .account_management .nav-acc{
+    display: flex;
+    margin: 0;  
+    padding: 20px 0 10px 0;
+}
+
+.account-page .acc{
+    color: #7E7D88;
+}
+
+.account-page .acc-list{
+    color: #FF7506;
+}
+
+.account-page .account_management .table_account{
+    display: flex;
+    margin-top: 70px;
+}
+
+.account-page .account_management .account-list{
+    display: flex;
+    margin-bottom: -50px;
+}
+
+.account-page .account_management .account-list .account-search{
+    margin-right: 560px;
+}
+

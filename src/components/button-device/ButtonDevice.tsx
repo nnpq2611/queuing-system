@@ -1,6 +1,5 @@
 import React from "react";
 import "./ButtonDevice.css";
-import PlusOutlined from "@ant-design/icons/PlusOutlined";
 import { Link } from "react-router-dom";
 
 const ButtonDevice: React.FC<{ icon: any; name: string; path: string }> = ({

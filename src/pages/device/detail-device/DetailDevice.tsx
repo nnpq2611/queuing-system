@@ -42,14 +42,6 @@ const DetailDevice = () => {
     getDevice();
   }, []);
 
-  // const data = [
-  //   {
-  //       name: "Thêm thiết bị",
-  //       path: "/adddevice",
-  //       icon: <PlusOutlined />
-  //   }
-  // ]
-
   return (
     <Row className="detail-device-page">
       <Col className="detail-device">

@@ -9,9 +9,12 @@ import DetailDevice from "../pages/device/detail-device/DetailDevice";
 import UpdateDevice from "../pages/device/update-device/UpdateDevice";
 import Progression from "../pages/progression/Progression";
 import AddProgression from "../pages/progression/addprogression/AddProgression";
+import DetailProgression from "../pages/progression/detail-progression/DetailProgression";
 import Report from "../pages/report/Report";
-// import RoleManagement from "../pages/role_management/RoleManagement";
-// import AccountManagement from "../pages/account_management/AccountManagement";
+import RoleManagement from "../pages/setting/role-management/RoleManagement";
+import AddRoleManagement from "../pages/setting/role-management/add-role-management/AddRoleManagement";
+import UpdateRoleManagement from "../pages/setting/role-management/update-role-management/UpdateRoleManagement";
+import AccountManagement from "../pages/setting/account-management/AccountManagement";
 // import UserManagement from "../pages/user_management/UserManagement";
 
 const Router = () => {
@@ -26,8 +29,11 @@ const Router = () => {
       <Route path="/progression" element={<Progression />} />
       <Route path="/addprogression" element={<AddProgression />} />
       <Route path="/report" element={<Report />} />
-      {/* <Route path="/role_management" element={<RoleManagement />} /> */}
-      {/* <Route path="/account_management" element={<AccountManagement />} /> */}
+      <Route path="/detail-progression/:progressionId" element={<DetailProgression />} />
+      <Route path="/role_management" element={<RoleManagement />} />
+      <Route path="/add_role_management" element={<AddRoleManagement />} />
+      <Route path="/update_role_management/:roleId" element={<UpdateRoleManagement />} />
+      <Route path="/account_management" element={<AccountManagement />} />
       {/* <Route path="/user_management" element={<UserManagement />} /> */}
       <Route path="/user" element={<UserName />} />
 

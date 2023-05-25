@@ -1,0 +1,31 @@
+.button-report_add{
+    background-color: #FFF2E7;
+    width: 80px;
+    height: 120px;
+    float: right;
+    border-radius: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    text-align: center;
+    border: #FFF2E7;
+}
+
+.button-report_add .button-report_add-icon{
+    color: #FFFF;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #FF9138;
+    border-radius: 10px;
+}
+
+
+.button-report_add .button-report_add-name{
+    color: #FF9138;
+    font-size: 1rem;
+    font-weight: bold;
+    align-items: center;  
+}
