@@ -44,10 +44,10 @@ const ServiceTable: React.FC<{ service_show: service[] }> = ({ service_show }) =
             <td>{item.Thong_tin_dich_vu.Mo_ta}</td>
             <td>{item.Thong_tin_dich_vu.Trang_thai_hoat_dong}</td>
             <td>
-                <Link to={`/detail-serice/${index}`}>Chi tiết</Link>
+                <Link to={`/detail-service/${index}`}>Chi tiết</Link>
             </td>
             <td>
-                <Link to={`/update-serice/${index}`}>Cập nhật</Link>
+                <Link to={`/update-service/${index}`}>Cập nhật</Link>
             </td>
         </tr>
     )

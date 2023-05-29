@@ -1,0 +1,105 @@
+.add-service-page{
+    margin-left: 15%;
+    background-color: #f5f5f5;
+    height: 800px;
+}
+
+.add-service-page .add-service {
+    padding:0 20px 0 20px;
+}
+
+.add-service-page .add-service .nav-add{
+    display: flex;
+    align-items: center;    
+    padding: 20px 0 10px 0;
+}
+
+.add-service-page .ser{
+    color: #7E7D88;
+}
+
+.add-service-page .add-ser{
+    color: #FF7506;
+}
+
+.add-service-page .add-service .add-list{
+    background-color: #ffff;
+    padding: 10px 20px 20px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    display: flex;
+}
+
+.add-service-page .add-service .add-list h3{
+    color: #FF7506;    
+}
+
+.add-service-page .add-service .add-list .add-list-ser{
+    margin-right: 30px;
+}
+
+.add-service-page .add-service .add-list .add-list_form-description{
+    margin-top: 40px;
+}
+
+.add-service-page .add-service .add-list-rule-number{
+    display: flex;
+    align-items: center;
+}
+
+.add-service-page .add-service .add-list-rule-number .add-list-rule1{
+    display: flex;
+    align-items: center;    
+    margin-right: 20px;
+}
+
+.add-service-page .add-service .add-list-rule-number .add-list-rule1 p{
+    margin-left: 10px;
+}
+
+.add-service-page .add-service .add-list-rule-number .add-list-number .add-list-number1{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.add-service-page .add-service .add-list-rule-number .add-list-number .add-list-number1 p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.add-service-page .add-service .add-list-rule-number .add-list-number .add-list-number1 .ant-input{
+    width: 50px;
+    height: 30px;  
+}
+
+.add-service-page .add-service .add-list__button{
+    margin: 20px 400px 0 400px;
+}
+
+.add-service-page .add-service .add-list__button .add-list__button-cancel{
+    width: 110px;
+    height: 35px;
+    background-color: #FFF2E7;
+    color: #FF9138;
+    border: 1px solid #FF9138;
+    margin-right: 30px;
+}
+
+.add-service-page .add-service .add-list__button .add-list__button-cancel:hover{
+    background-color: #FF9138;
+    color: #ffff;
+}
+
+.add-service-page .add-service .add-list__button .add-list__button-add-service{
+    width: 110px;
+    height: 35px;
+    background-color: #FF9138;
+    color: #ffff;
+}
+
+.add-service-page .add-service .add-list__button .add-list__button-add-service:hover{
+    background-color: #FFF2E7;
+    color: #FF9138;
+    border: 1px solid #FF9138;
+}

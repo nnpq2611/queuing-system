@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col } from "antd";
 import "./Device.css";
 import { Space, Select, Input } from "antd";
@@ -44,7 +44,7 @@ const Device = () => {
     setDevice_show(devices);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     get(starCountRef)
       .then((snapshot: any) => {
         if (snapshot.exists()) {
@@ -69,6 +69,8 @@ const Device = () => {
     });
     setDevice_show(search);
   };
+
+  
 
   return (
     <Row className="device-page">

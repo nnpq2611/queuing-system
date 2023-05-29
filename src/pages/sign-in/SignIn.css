@@ -1,0 +1,30 @@
+.sign-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffff;
+}
+
+.sign-in-page .sign-in img{
+    align-items: center;
+    width: 200px;
+    margin-bottom: 60px;
+}
+
+.sign-in-page .sign-in .sign-in__form {
+    margin-bottom: 60px;    
+}
+
+.sign-in-page .sign-in .sign-in__btn .sign-in__form-input-btn{
+    width: 110px;
+    height: 35px;
+    background-color: #FF9138;
+    color: #ffff;
+}
+
+.sign-in-page .sign-in .sign-in__btn .sign-in__form-input-btn:hover{
+    background-color: #FFF2E7;
+    color: #FF9138;
+    border: 1px solid #FF9138;
+}

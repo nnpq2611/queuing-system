@@ -38,7 +38,7 @@ const AccountTable: React.FC<{ account_show: account[] }> = ({ account_show }) =
             <td>{item.Ten_vai_tro}</td>
             <td>{item.Trang_thai ? "Hoạt động" : "Ngưng hoạt động"}</td>
             <td>
-                <Link to={`/update-account/${index}`}>Cập nhật</Link>
+                <Link to={`/update_account_management/${index}`}>Cập nhật</Link>
             </td>   
         </tr>
     );

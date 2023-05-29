@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import "./Report.css"
-import {Row, Col, DatePicker, Button} from "antd";
+import {Row, Col, DatePicker} from "antd";
 import {CaretRightOutlined} from '@ant-design/icons';
 import database from '../../firebase/FireBase';
 import { ref, get } from "firebase/database";
@@ -69,9 +69,7 @@ const Report = () => {
         .catch((error: any) => {
             console.error(error);
         });
-    }, []);
-    
-
+    }, []);  
 
     return (
         <Row className="report-page">

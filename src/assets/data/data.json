@@ -139,5 +139,19 @@
             "Nhap_lai_mat_khau": "123457",
             "Tinh_trang": false
         }
+    ],
+    "active": [
+        {
+            "Ten_dang_nhap": "nguyendung",
+            "Thoi_gian_tac_dong": "14:35 - 07/05/2023",
+            "IP_thuc_hien": "192.168.3.1",
+            "Thao_tac_thuc_hien":"Cập nhật thông tin dịch vụ DV_01"
+        },
+        {
+            "Ten_dang_nhap": "nguyendung",
+            "Thoi_gian_tac_dong": "14:35 - 07/05/2023",
+            "IP_thuc_hien": "192.168.3.1",
+            "Thao_tac_thuc_hien":"Cập nhật thông tin dịch vụ DV_01"
+        }
     ]
 }
