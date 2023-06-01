@@ -30,6 +30,14 @@
     display: flex;
 }
 
+.update-service-page .update-service .update-list-id{
+    margin-bottom: 20px;
+}
+
+.update-service-page .update-service p{
+    margin-bottom: 5px;
+}
+
 .update-service-page .update-service .update-list h3{
     color: #FF7506;    
 }
@@ -39,9 +47,12 @@
 }
 
 .update-service-page .update-service .update-list .update-list_form-description{
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
+.update-service-page .update-service .update-list .update-list_form-description p{
+    margin-bottom: 5px;
+}
 .update-service-page .update-service .update-list-rule-number{
     display: flex;
     align-items: center;
@@ -51,6 +62,7 @@
     display: flex;
     align-items: center;    
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .update-service-page .update-service .update-list-rule-number .update-list-rule1 p{

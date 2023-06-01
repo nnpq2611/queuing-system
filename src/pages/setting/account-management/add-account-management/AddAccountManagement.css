@@ -30,6 +30,10 @@
     font-weight: bold;
 }
 
+.add-account-page .add-account .add-list .add-list-dev p{
+    margin: 20px 0 10px 0;
+}
+
 .add-account-page .add-account .add-list h3{
     color: #FF7506;    
 }

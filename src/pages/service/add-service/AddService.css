@@ -30,6 +30,14 @@
     display: flex;
 }
 
+.add-service-page .add-service .add-list .add-list-ser .add-list-id{
+    margin-bottom: 20px;
+}
+
+.add-service-page .add-service .add-list .add-list-ser p{
+    margin-bottom: 5px;
+}
+
 .add-service-page .add-service .add-list h3{
     color: #FF7506;    
 }
@@ -39,7 +47,11 @@
 }
 
 .add-service-page .add-service .add-list .add-list_form-description{
-    margin-top: 40px;
+    margin-top: 50px;
+}
+
+.add-service-page .add-service .add-list .add-list_form-description p{
+    margin-bottom: 5px;
 }
 
 .add-service-page .add-service .add-list-rule-number{
@@ -51,6 +63,7 @@
     display: flex;
     align-items: center;    
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .add-service-page .add-service .add-list-rule-number .add-list-rule1 p{

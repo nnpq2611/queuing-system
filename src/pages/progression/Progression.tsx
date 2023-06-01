@@ -28,6 +28,7 @@ const Progression = () => {
     const [searchInput, setSearchInput] = useState("");
     const [progression, setProgression] = useState<progression[]>([]);
     const [progression_show, setProgression_show] = useState<progression[]>([]);
+    const [capSo, setCapSo] =  useState<{label: string, value: string}[]>([]);
     const starCountRef = ref(database, "progression");
     const dateFormatList = ["DD/MM/YYYY"];
 
@@ -79,6 +80,9 @@ const Progression = () => {
             if (snapshot.exists()) {
             setProgression(snapshot.val());
             setProgression_show(snapshot.val());
+            const capSo = snapshot.val().map((item: any) => item.Ten_dich_vu).filter((value: any, index: any, self: any) => self.indexOf(value) === index);
+            setCapSo(capSo.map((item: any) => ({value: item, label: item})));
+    
             } else {
             console.log("No data available");
             }
@@ -110,9 +114,10 @@ const Progression = () => {
                             value={filterService}
                             options={[
                             { value: "Tất cả", label: "Tất cả" },
-                            { value: "Khám tim mạch", label: "Khám tim mạch" },
-                            { value: "Khám tai mũi họng", label: "Khám tai mũi họng" },
-                            { value: "Khám sản - Phụ khoa", label: "Khám sản - Phụ khoa" },
+                            // { value: "Khám tim mạch", label: "Khám tim mạch" },
+                            // { value: "Khám tai mũi họng", label: "Khám tai mũi họng" },
+                            // { value: "Khám sản - Phụ khoa", label: "Khám sản - Phụ khoa" },
+                            ...capSo
                             ]}
                         />
                     </Space>

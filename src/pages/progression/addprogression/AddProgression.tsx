@@ -1,5 +1,5 @@
 import React from 'react'
-import {Space, Select, Row, Col} from 'antd'
+import {Space, Select, Row, Col,Modal} from 'antd'
 import "./AddProgression.css"
 import { Button } from 'antd';
 import { useState } from 'react';
@@ -23,6 +23,15 @@ const AddProgression = () => {
     const [filterService, setFilterService] = React.useState("Chọn dịch vụ");
     const [progression, setProgression] = useState<progression[]>([]);
     const [progression_show, setProgression_show] = useState<progression[]>([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     const starCountRef = ref(database, "progression");
     const handleChange = (filterService: string) => {
         let progressions = [...progression];
@@ -79,11 +88,21 @@ const AddProgression = () => {
                     </Space>
                     <div className='add-list__button'>
                         <Button className='add-list__button-cancel' >Hủy bỏ</Button>
-                        <Button className='add-list__button-add-progression' >In số</Button>
+                        <Button className='add-list__button-add-progression' onClick={showModal} >In số</Button>
                     </div>
                 </div>
-            </Col>
+                <Modal
+                    open={isModalOpen}
+                    onCancel={handleCancel}
+                    footer={null}
+                    className="custom-modal"
+                    width={480}
+                >                    
+                    <h2>Số thứ tự được cấp</h2>
+                    
 
+                </Modal>
+            </Col>            
         </Row>
     )
 }

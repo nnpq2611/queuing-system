@@ -18,6 +18,11 @@
     display: flex; 
 }
 
+.user-name-page .user-name .avata h2{
+    text-align: center;
+    margin: 0;
+}
+
 .user-name-page .user-name .name-phone-mail, .account {
     padding: 0 20px 25px 20px;
     

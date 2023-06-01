@@ -10,7 +10,6 @@ interface account {
     Ten_vai_tro: string;
     Ten_dang_nhap: string;
     Mat_khau: string;
-    Nhap_lai_mat_khau: string;
     Trang_thai: boolean;
 }
 

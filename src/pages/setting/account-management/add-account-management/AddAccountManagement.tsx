@@ -13,7 +13,6 @@ interface account{
     Ten_vai_tro: string,
     Ten_dang_nhap: string,
     Mat_khau: string,
-    Nhap_lai_mat_khau: string,
     Trang_thai: boolean,
 }
 
@@ -59,7 +58,6 @@ const AddAccountManagement = () => {
             Ten_vai_tro: `${ten_vai_tro}`,
             Ten_dang_nhap: `${ten_dang_nhap}`,
             Mat_khau: `${mat_khau}`,
-            Nhap_lai_mat_khau: `${nhap_lai_mat_khau}`,
             Trang_thai: `${trang_thai}`,          
         };
     

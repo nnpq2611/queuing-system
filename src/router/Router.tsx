@@ -9,6 +9,7 @@ import UpdateDevice from "../pages/device/update-device/UpdateDevice";
 import Service from "../pages/service/Service";
 import AddService from "../pages/service/add-service/AddService";
 import UpdateService from "../pages/service/update-service/UpdateService";
+import DetailService from "../pages/service/detail-service/DetailService";
 import Progression from "../pages/progression/Progression";
 import AddProgression from "../pages/progression/addprogression/AddProgression";
 import DetailProgression from "../pages/progression/detail-progression/DetailProgression";
@@ -21,6 +22,7 @@ import AddAccountManagement from "../pages/setting/account-management/add-accoun
 import UpdateAccountManagement from "../pages/setting/account-management/update-account-management/UpdateAccountManagement";
 import UserManagement from "../pages/setting/user-management/UserManagement";
 import SignIn from "../pages/sign-in/SignIn";
+import ForgotPassword from "../pages/sign-in/forgot_password/ForgotPassword";
 
 const Router = () => {
   return (
@@ -33,6 +35,7 @@ const Router = () => {
       <Route path="/service" element={<Service />} />
       <Route path="/addservice" element={<AddService />} />
       <Route path="/update-service/:serviceId" element={<UpdateService />} />
+      <Route path="/detail-service/:serviceId" element={<DetailService />} />
       <Route path="/progression" element={<Progression />} />
       <Route path="/addprogression" element={<AddProgression />} />
       <Route path="/report" element={<Report />} />
@@ -46,6 +49,8 @@ const Router = () => {
       <Route path="/user_management" element={<UserManagement />} />
       <Route path="/user" element={<UserName />} />
       <Route path="/sign-in"  element={<SignIn />} />
+      <Route path="/forgot_password"  element={<ForgotPassword />} />
+    
 
     </Routes>
   );

@@ -4,9 +4,13 @@ import { Button } from 'antd'
 import { LogoutOutlined } from '@ant-design/icons';
 
 const SignOut = () => {
+  const handleLogout = () => {
+    localStorage.removeItem('account')
+    window.location.href = '/sign-in'
+  }
   return (
     <div className='sign-out'>
-        <Button><LogoutOutlined />Đăng xuất</Button>
+        <Button onClick={handleLogout}><LogoutOutlined />Đăng xuất</Button>
     </div>
   )
 }

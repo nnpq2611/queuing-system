@@ -95,7 +95,7 @@ const Report = () => {
                 <div className="table-report">
                     <ReportTable report_show={report_show} />
                     <ButtonReport
-                        name="Cấp số mới"
+                        name="Tải về"
                         icon={<DownloadOutlined />}
                         onClick={handleDowload}
                     />

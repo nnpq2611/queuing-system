@@ -27,4 +27,32 @@
     margin: 20px 0 20px 0;
 }
 
+.table1 table{
+    width: 730px;
+}
+
+.table1 table tr:nth-child(odd){
+    background-color: #fff;  
+}
+
+.table1 table tr:nth-child(even){
+    background-color: #FFF2E7;  
+}
+
+.table1 table th{
+    background-color: #FF9138;
+    color: #fff;
+    height: 40px;
+    padding: 0 20px 0 20px;
+}
+
+.table1 table td{
+    height: 40px;
+    padding: 0 20px 0 20px;
+}
+
+.table1 .pagination {
+    float: right;
+    margin: 20px 0 20px 0;
+}
 

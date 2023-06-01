@@ -14,15 +14,15 @@ interface account{
     Ten_vai_tro: string,
     Ten_dang_nhap: string,
     Mat_khau: string,
-    Nhap_lai_mat_khau: string,
     Trang_thai: boolean,
 }
 
 const AccountManagement = () => {
-    const [filterRole,setFilterRole ] = React.useState<string>("Tất cả")
-    const [account, setAccount] = React.useState<account[]>([])
-    const [accout_show, setAccount_show] = React.useState<account[]>([])
-    const [searchInput, setSearchInput] = React.useState<string>("")
+    const [filterRole,setFilterRole ] = React.useState<string>("Tất cả");
+    const [account, setAccount] = React.useState<account[]>([]);
+    const [accout_show, setAccount_show] = React.useState<account[]>([]);
+    const [role_account, setRole] = React.useState<{label: string, value: string}[]>([]);
+    const [searchInput, setSearchInput] = React.useState<string>("");
     const starCountRef = ref(database, "account");  
 
     const handleChange = (filterRole:string) => {
@@ -52,6 +52,8 @@ const AccountManagement = () => {
             if (snapshot.exists()) {
             setAccount(snapshot.val());
             setAccount_show(snapshot.val());
+            const role1 = snapshot.val().map((item: any) => item.Ten_vai_tro).filter((value: any, index: any, self: any) => self.indexOf(value) === index);
+            setRole(role1.map((item: any) => ({value: item, label: item})));
             } else {
             console.log("No data available");
             }
@@ -82,11 +84,11 @@ const AccountManagement = () => {
                                     handleChange(value);
                                 }}
                                 value={filterRole}
-                            >
-                                <Select.Option value="Tất cả">Tất cả</Select.Option>
-                                <Select.Option value="Admin">Admin</Select.Option>
-                                <Select.Option value="Nhân viên">Nhân viên</Select.Option>
-                            </Select>
+                                options={[
+                                    { label: "Tất cả", value: "Tất cả" },
+                                    ...role_account,
+                                ]}
+                            />
                         </Space>
                     </div>
                     <div className="key-word">

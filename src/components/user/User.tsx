@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link} from "react-router-dom";
-import img from '../../assets/img/unsplash_Fyl8sMC2j2Q.png'
+import img from '../../assets/img/avatar-def.jpg'
 
 const User = () => {
     const user = 
@@ -13,7 +13,7 @@ const User = () => {
     return (
         <div className='user'>
             {user.map((item, index) => (
-                <Link to={item.path} key={index}><img src={img} alt="img" /></Link>  
+                <Link to={item.path} key={index}><img src={img} alt="img" style={{width: "50px", height: "50px", objectFit: "cover", borderRadius: "50%"}}/></Link>  
             ))}
         </div>
     )

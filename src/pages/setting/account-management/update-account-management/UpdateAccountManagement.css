@@ -30,6 +30,10 @@
     font-weight: bold;
 }
 
+.update-account-page .update-account .update-list p{
+    margin: 20px 0 10px 0;
+}
+
 .update-account-page .update-account .update-list h3{
     color: #FF7506;    
 }

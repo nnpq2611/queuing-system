@@ -3,6 +3,7 @@
     justify-content: flex-end;
     align-items: center;
     margin-right: 5%;
+    margin-top: 1%;
     position: absolute;
     right: 0;
     top: 0;
@@ -12,4 +13,8 @@
     margin-right: 10px;    
 }
 
+
+.top-bar .user-name h4, p{
+    margin: 0;
+}
 

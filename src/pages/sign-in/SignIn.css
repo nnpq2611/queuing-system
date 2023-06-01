@@ -1,19 +1,35 @@
 .sign-in-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-color: #ffff;
 }
 
-.sign-in-page .sign-in img{
-    align-items: center;
-    width: 200px;
+.sign-in-page .sign-in {
+    background-color: #f5f5f5;
+}
+
+.sign-in-page .sign-in .sign-in__logo{
+    margin-top: 15%;
     margin-bottom: 60px;
+    text-align: center;
+}
+
+.sign-in-page .sign-in .sign-in__logo img{
+    width: 150px;
 }
 
 .sign-in-page .sign-in .sign-in__form {
-    margin-bottom: 60px;    
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 70%; 
+}
+
+.sign-in-page .sign-in .sign-in__form .sign-in__form-input-input{
+    height: 40px;
+}
+
+
+.sign-in-page .sign-in .sign-in__btn{
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .sign-in-page .sign-in .sign-in__btn .sign-in__form-input-btn{
@@ -27,4 +43,12 @@
     background-color: #FFF2E7;
     color: #FF9138;
     border: 1px solid #FF9138;
+}
+
+.sign-in-page .sign-in__img{
+    background-color: #FFFF;
+}
+
+.sign-in-page .sign-in__img-img{
+    object-fit: cover;
 }
