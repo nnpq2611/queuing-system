@@ -114,9 +114,6 @@ const Progression = () => {
                             value={filterService}
                             options={[
                             { value: "Tất cả", label: "Tất cả" },
-                            // { value: "Khám tim mạch", label: "Khám tim mạch" },
-                            // { value: "Khám tai mũi họng", label: "Khám tai mũi họng" },
-                            // { value: "Khám sản - Phụ khoa", label: "Khám sản - Phụ khoa" },
                             ...capSo
                             ]}
                         />

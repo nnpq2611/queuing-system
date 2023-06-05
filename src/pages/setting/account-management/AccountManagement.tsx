@@ -1,6 +1,6 @@
 import React from 'react'
 import "./AccountManagement.css"
-import {Col, Row, Input, Button, Table, Space, Modal, Form, Select, Checkbox} from "antd";
+import {Col, Row, Input, Space, Select} from "antd";
 import { SearchOutlined, PlusOutlined } from '@ant-design/icons';
 import ButtonDevice from '../../../components/button-device/ButtonDevice';
 import AccountTable from '../../../module/Table/AccountTable';
@@ -11,25 +11,27 @@ interface account{
     Ho_ten: string,
     So_dien_thoai: string,
     Email: string,
-    Ten_vai_tro: string,
+    Vai_tro: string,
     Ten_dang_nhap: string,
     Mat_khau: string,
+    Nhap_lai_mat_khau: string,
     Trang_thai: boolean,
 }
+
 
 const AccountManagement = () => {
     const [filterRole,setFilterRole ] = React.useState<string>("Tất cả");
     const [account, setAccount] = React.useState<account[]>([]);
-    const [accout_show, setAccount_show] = React.useState<account[]>([]);
-    const [role_account, setRole] = React.useState<{label: string, value: string}[]>([]);
+    const [account_show, setAccount_show] = React.useState<account[]>([]);
+    const [role_account, setRoleAccount] = React.useState<{label: string, value: string}[]>([]);
     const [searchInput, setSearchInput] = React.useState<string>("");
-    const starCountRef = ref(database, "account");  
+    const starCountRef = ref(database, "setting/account");  
 
     const handleChange = (filterRole:string) => {
         let accounts = [...account];
         if (filterRole !== "Tất cả") {
             accounts = accounts.filter(
-                (item) => item.Ten_vai_tro === filterRole
+                (item) => item.Vai_tro === filterRole
             );
         }
         setAccount_show(accounts);
@@ -52,8 +54,8 @@ const AccountManagement = () => {
             if (snapshot.exists()) {
             setAccount(snapshot.val());
             setAccount_show(snapshot.val());
-            const role1 = snapshot.val().map((item: any) => item.Ten_vai_tro).filter((value: any, index: any, self: any) => self.indexOf(value) === index);
-            setRole(role1.map((item: any) => ({value: item, label: item})));
+            const role1 = snapshot.val().map((item: any) => item.Vai_tro).filter((value: any, index: any, self: any) => self.indexOf(value) === index);
+            setRoleAccount(role1.map((item: any) => ({value: item, label: item})));
             } else {
             console.log("No data available");
             }
@@ -104,7 +106,7 @@ const AccountManagement = () => {
                     </div>
                 </div>
                 <div className="table_account">
-                    <AccountTable account_show={accout_show}/>
+                    <AccountTable account_show={account_show}/>
                     <ButtonDevice
                         name="Thêm tài khoản"
                         path="/add_account_management"

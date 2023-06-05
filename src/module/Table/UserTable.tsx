@@ -7,7 +7,7 @@ interface user {
     Ten_dang_nhap: string,
     Thoi_gian_tac_dong: string,
     IP_thuc_hien: string,
-    Thao_tac_thuc_hien: string
+    Thao_tac_thuc_hien: string,
 }
 
 const user_list = [

@@ -3,14 +3,15 @@ import "./Table.css";
 import { Pagination } from "antd";
 import { Link } from "react-router-dom";
 
-interface account {
-    Ho_ten: string;
-    So_dien_thoai: string;
-    Email: string;
-    Ten_vai_tro: string;
-    Ten_dang_nhap: string;
-    Mat_khau: string;
-    Trang_thai: boolean;
+interface account{
+    Ho_ten: string,
+    So_dien_thoai: string,
+    Email: string,
+    Vai_tro: string,
+    Ten_dang_nhap: string,
+    Mat_khau: string,
+    Nhap_lai_mat_khau: string,
+    Trang_thai: boolean,
 }
 
 const account_list = [    
@@ -28,16 +29,17 @@ const renderHead = (item: any, index: any) => <th key={index}>{item}</th>;
 const AccountTable: React.FC<{ account_show: account[] }> = ({ account_show }) => {
     const [dataShow, setDataShow] = useState<account[]>([]);
 
+
     const renderBody = (item: any, index: any) => (
         <tr key={index}>
             <td>{item.Ten_dang_nhap}</td>
             <td>{item.Ho_ten}</td>
             <td>{item.So_dien_thoai}</td>
             <td>{item.Email}</td>
-            <td>{item.Ten_vai_tro}</td>
+            <td>{item.Vai_tro}</td>
             <td>{item.Trang_thai ? "Hoạt động" : "Ngưng hoạt động"}</td>
             <td>
-                <Link to={`/update_account_management/${index}`}>Cập nhật</Link>
+                <Link to={`/update_setting_management/${index}`}>Cập nhật</Link>
             </td>   
         </tr>
     );

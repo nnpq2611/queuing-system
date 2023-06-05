@@ -1,10 +1,67 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { Row, Col, Input, Button, Checkbox } from 'antd'
 import "./AddRoleManagement.css"
+import {ref, get}   from "firebase/database"
+import database from '../../../../firebase/FireBase';
+import { useNavigate } from 'react-router-dom';
 
+
+interface role{
+    Ten_vai_tro: string,
+    So_nguoi_dung: number,
+    Mo_ta: string,
+    Phan_quyen: {
+        A:{
+            Chuc_nang_X: boolean,
+            Chuc_nang_Y: boolean,
+            Chuc_nang_Z: boolean,
+        },
+        B:{
+            Chuc_nang_X: boolean,
+            Chuc_nang_Y: boolean,
+            Chuc_nang_Z: boolean,
+        }
+    }
+}
 
 const AddRoleManagement = () => {
     const { TextArea } = Input;
+    const [ten_vai_tro, setTenVaiTro] = useState<string>("");
+    const [mo_ta, setMoTa] = useState<string>("");
+    const [role_management, setRoleManagement] = useState<role[]>([]);
+    const [role_show, setRoleManagementShow] = useState<role[]>([]);
+    const starCountRef = ref(database, "setting/role");
+    const [check, setCheck] = useState<boolean>(false);
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        get(starCountRef)
+          .then((snapshot: any) => {
+            if (snapshot.exists()) {
+              setRoleManagement(snapshot.val());
+            } else {
+              console.log("No data available");
+            }
+          })
+          .catch((error: any) => {
+            console.error(error);
+          });
+      }, []);
+    
+      const handleCancel = () => {
+        navigate("/role_management");
+      };
+    
+      const checkNull = () => {
+       
+      };
+    
+      const handleSave = () => {
+       
+      };
+
+
     return (
         <Row className="add-role_page">
             <Col className="add-role_management">
@@ -84,8 +141,8 @@ const AddRoleManagement = () => {
                     </div>
                 </div>
                 <div className="add-role_form-button">
-                    <Button className="add-role_form-button-cancel">Hủy bỏ</Button>
-                    <Button className="add-role_form-button-save">Thêm</Button>
+                    <Button className="add-role_form-button-cancel" onClick={handleCancel}>Hủy bỏ</Button>
+                    <Button className="add-role_form-button-save" onClick={handleSave}>Thêm</Button>
                 </div>                                
             </Col>
         </Row>
