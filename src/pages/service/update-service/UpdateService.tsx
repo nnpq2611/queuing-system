@@ -64,7 +64,7 @@ const UpdateService = () => {
         <Row className="update-service-page">
             <Col className="update-service">
                 <div className="nav-update">
-                <h3 className="ser">Thiết bị &gt; </h3>
+                <h3 className="ser">Dịch vụ &gt; </h3>
                 <h3 className="ser">Danh sách dịch vụ &gt; </h3>
                 <h3 className="update-ser">Thêm dịch vụ</h3>
                 </div>
@@ -77,7 +77,7 @@ const UpdateService = () => {
                         <p>Mã dịch vụ</p>
                         <Input
                         style={{ width: 500 }}
-                        placeholder="Nhập mã thiết bị"
+                        placeholder="Nhập mã dịch vụ"
                         onChange={(e) => setMaDichVu(e.target.value)}
                         />
                     </div>
@@ -85,7 +85,7 @@ const UpdateService = () => {
                         <p>Tên dịch vụ</p>
                         <Input
                         style={{ width: 500 }}
-                        placeholder="Nhập tên thiết bị"
+                        placeholder="Nhập tên dịch vụ"
                         onChange={(e) => setTenDichVu(e.target.value)}
                         />
                     </div>

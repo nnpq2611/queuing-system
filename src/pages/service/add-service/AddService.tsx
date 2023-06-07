@@ -66,7 +66,7 @@ const AddService = () => {
     <Row className="add-service-page">
       <Col className="add-service">
         <div className="nav-add">
-          <h3 className="ser">Thiết bị &gt; </h3>
+          <h3 className="ser">Dịch vụ &gt; </h3>
           <h3 className="ser">Danh sách dịch vụ &gt; </h3>
           <h3 className="add-ser">Thêm dịch vụ</h3>
         </div>
@@ -79,7 +79,7 @@ const AddService = () => {
                 <p>Mã dịch vụ</p>
                 <Input
                   style={{ width: 500 }}
-                  placeholder="Nhập mã thiết bị"
+                  placeholder="Nhập mã dịch vụ"
                   onChange={(e) => setMaDichVu(e.target.value)}
                 />
               </div>
@@ -87,7 +87,7 @@ const AddService = () => {
                 <p>Tên dịch vụ</p>
                 <Input
                   style={{ width: 500 }}
-                  placeholder="Nhập tên thiết bị"
+                  placeholder="Nhập tên dịch vụ"
                   onChange={(e) => setTenDichVu(e.target.value)}
                 />
               </div>

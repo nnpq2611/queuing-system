@@ -126,16 +126,16 @@
             "Ten_vai_tro": "Admin",
             "Ten_dang_nhap": "nguyendung",
             "Mat_khau": "123456",
-            "Tinh_trang": true
+            "Trang_thai": true
         },
         {
             "Ho_ten": "Nguyễn Ngọc Phương Quỳnh",
             "So_dien_thoai": "0948523626",
             "Email": "nnpquynh01vvk@gmail.com",
-            "Ten_vai_tro": "Nhân viên",
+            "Ten_vai_tro": "Admin",
             "Ten_dang_nhap": "quynhnnp011",
             "Mat_khau": "123457",
-            "Tinh_trang": false
+            "Trang_thai": false
         }
     ],
     "active": [

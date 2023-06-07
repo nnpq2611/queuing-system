@@ -43,6 +43,10 @@
     margin-right: 20px;
 }
 
+.update-device-page .update-device .update-list-dev p{
+    margin: 10px 0 5px 0;
+}
+
 .update-device-page .update-device .update-list-dev input{
     width:  500px;
     border-radius: 5px;

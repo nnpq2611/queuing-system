@@ -38,6 +38,10 @@
     display: flex;
 }
 
+.add-device-page .add-device .add-list .add-list-dev p{
+    margin: 10px 0 5px 0;
+}
+
 .add-device-page .add-device .add-list .add-list-dev input{
     width:  500px;
     border-radius: 5px;

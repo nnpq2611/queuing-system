@@ -18,6 +18,10 @@
     color: #7E7D88;
 }
 
+.detail-device-page .detail-device .information-device p{
+    margin: 10px 0 5px 0;
+}
+
 .detail-device-page .detail-device .add-dev{
     color: #FF7506;
 }

@@ -17,7 +17,6 @@ const SignIn = () => {
       .then((snapshot: any) => {
         if (snapshot.exists()) {
           setAccount(snapshot.val());
-          console.log(snapshot.val());
         } else {
           console.log("No data available");
         }
