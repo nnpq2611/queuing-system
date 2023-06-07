@@ -29,7 +29,9 @@
                 "Ma_dich_vu": "KIO_01",
                 "Ten_dich_vu": "Khám tim mạch",
                 "Mo_ta": "Chuyên các bệnh lý về tim",
-                "Trang_thai_hoat_dong":"Hoạt động"
+                "Trang_thai_hoat_dong":"Hoạt động",
+                "Thoi_gian_cap": "14:35 - 07/05/2023",
+                "Han_su_dung": "18:00 - 07/05/2023"
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
@@ -46,7 +48,9 @@
                 "Ma_dich_vu": "KIO_01",
                 "Ten_dich_vu": "Khám tai mũi họng",
                 "Mo_ta": "Chuyên các bệnh lý về tai mũi họng",
-                "Trang_thai_hoat_dong":"Ngưng hoạt động"
+                "Trang_thai_hoat_dong":"Ngưng hoạt động",
+                "Thoi_gian_cap": "14:35 - 07/05/2023",
+                "Han_su_dung": "18:00 - 07/05/2023"
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
@@ -83,129 +87,69 @@
             "Email": "nnpquynh01vvk@gmail.com"
         }
     ],
-    "setting":{
-        "role": [
-            {
-                "Ten_vai_tro": "Admin",
-                "So_nguoi_dung": 6,
-                "Mo_ta": "Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu",
-                "Phan_quyen": {
-                    "A": [
-                        {
-                            "Chuc_nang_x": "false"
-                        },
-                        {
-                            "Chuc_nang_y": "false"
-                        },
-                        {
-                            "Chuc_nang_z": "false"
-                        }
-                    ],
-                    "B": [
-                        {
-                            "Chuc_nang_x": "true"
-                        },
-                        {
-                            "Chuc_nang_y": "true"
-                        },
-                        {
-                            "Chuc_nang_z": "true"
-                        }
-                    ]
-                }
-            },
-            {
-                "Ten_vai_tro": "Kế toán",
-                "So_nguoi_dung": 6,
-                "Mo_ta": "Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu",
-                "Phan_quyen": {
-                    "A": [
-                        {
-                            "Chuc_nang_x": "true"
-                        },
-                        {
-                            "Chuc_nang_y": "true"
-                        },
-                        {
-                            "Chuc_nang_z": "true"
-                        }
-                    ],
-                    "B": [
-                        {
-                            "Chuc_nang_x": "true"
-                        },
-                        {
-                            "Chuc_nang_y": "true"
-                        },
-                        {
-                            "Chuc_nang_z": "true"
-                        }
-                    ]
-                }
-            },
-            {
-                "Ten_vai_tro": "Quản lý",
-                "So_nguoi_dung": 6,
-                "Mo_ta": "Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu",
-                "Phan_quyen": {
-                    "A": [
-                        {
-                            "Chuc_nang_x": "true"
-                        },
-                        {
-                            "Chuc_nang_y": "true"
-                        },
-                        {
-                            "Chuc_nang_z": "true"
-                        }
-                    ],
-                    "B": [
-                        {
-                            "Chuc_nang_x": "true"
-                        },
-                        {
-                            "Chuc_nang_y": "true"
-                        },
-                        {
-                            "Chuc_nang_z": "true"
-                        }
-                    ]
-                }
+    "role": [
+        {
+            "Ten_vai_tro": "Admin",
+            "So_nguoi_dung": 6,
+            "Mo_ta": "Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu",
+            "Phan_quyen": {
+                "A": [
+                    {
+                        "Chuc_nang_x": "false"
+                    },
+                    {
+                        "Chuc_nang_y": "false"
+                    },
+                    {
+                        "Chuc_nang_z": "false"
+                    }
+                ],
+                "B": [
+                    {
+                        "Chuc_nang_x": "true"
+                    },
+                    {
+                        "Chuc_nang_y": "true"
+                    },
+                    {
+                        "Chuc_nang_z": "true"
+                    }
+                ]
             }
-        ],
-        "account": [
-            {
-                "Ho_ten": "Nguyễn Thị Dung",
-                "So_dien_thoai": "0948523623",
-                "Email": "nguyendung@gmail.com",
-                "Vai_tro": "Quản lý",
-                "Ten_dang_nhap": "nguyendung",
-                "Mat_khau": "123456",
-                "Tinh_trang": true
-            },
-            {
-                "Ho_ten": "Nguyễn Ngọc Phương Quỳnh",
-                "So_dien_thoai": "0948523626",
-                "Email": "nnpquynh01vvk@gmail.com",
-                "Vai_tro": "Quản lý",
-                "Ten_dang_nhap": "quynhnnp011",
-                "Mat_khau": "123457",
-                "Tinh_trang": false
-            }
-        ],
-        "active": [
-            {
-                "Ten_dang_nhap": "nguyendung",
-                "Thoi_gian_tac_dong": "14:35 - 07/05/2023",
-                "IP_thuc_hien": "192.168.3.1",
-                "Thao_tac_thuc_hien":"Cập nhật thông tin dịch vụ DV_01"
-            },
-            {
-                "Ten_dang_nhap": "nguyendung",
-                "Thoi_gian_tac_dong": "14:35 - 07/05/2023",
-                "IP_thuc_hien": "192.168.3.1",
-                "Thao_tac_thuc_hien":"Cập nhật thông tin dịch vụ DV_01"
-            }
-        ]
-    }
+        }
+    ],
+    "account": [
+        {
+            "Ho_ten": "Nguyễn Thị Dung",
+            "So_dien_thoai": "0948523623",
+            "Email": "nguyendung@gmail.com",
+            "Ten_vai_tro": "Admin",
+            "Ten_dang_nhap": "nguyendung",
+            "Mat_khau": "123456",
+            "Tinh_trang": true
+        },
+        {
+            "Ho_ten": "Nguyễn Ngọc Phương Quỳnh",
+            "So_dien_thoai": "0948523626",
+            "Email": "nnpquynh01vvk@gmail.com",
+            "Ten_vai_tro": "Nhân viên",
+            "Ten_dang_nhap": "quynhnnp011",
+            "Mat_khau": "123457",
+            "Tinh_trang": false
+        }
+    ],
+    "active": [
+        {
+            "Ten_dang_nhap": "nguyendung",
+            "Thoi_gian_tac_dong": "14:35 - 07/05/2023",
+            "IP_thuc_hien": "192.168.3.1",
+            "Thao_tac_thuc_hien":"Cập nhật thông tin dịch vụ DV_01"
+        },
+        {
+            "Ten_dang_nhap": "nguyendung",
+            "Thoi_gian_tac_dong": "14:35 - 07/05/2023",
+            "IP_thuc_hien": "192.168.3.1",
+            "Thao_tac_thuc_hien":"Cập nhật thông tin dịch vụ DV_01"
+        }
+    ]
 }

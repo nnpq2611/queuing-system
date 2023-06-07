@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import "./Table.css"
 import { Pagination } from "antd";
+import { Link } from "react-router-dom";
 
 interface progression {
     So_thu_tu: number,

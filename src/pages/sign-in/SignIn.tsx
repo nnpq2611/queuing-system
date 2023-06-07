@@ -41,7 +41,7 @@ const SignIn = () => {
 
   useEffect(() => {
     getAccount();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Row className="sign-in-page">

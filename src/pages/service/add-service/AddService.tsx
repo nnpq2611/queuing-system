@@ -79,7 +79,7 @@ const AddService = () => {
                 <p>Mã dịch vụ</p>
                 <Input
                   style={{ width: 500 }}
-                  placeholder="Nhập mã dịch vụ"
+                  placeholder="Nhập mã thiết bị"
                   onChange={(e) => setMaDichVu(e.target.value)}
                 />
               </div>
@@ -87,7 +87,7 @@ const AddService = () => {
                 <p>Tên dịch vụ</p>
                 <Input
                   style={{ width: 500 }}
-                  placeholder="Nhập tên dịch vụ"
+                  placeholder="Nhập tên thiết bị"
                   onChange={(e) => setTenDichVu(e.target.value)}
                 />
               </div>

@@ -93,7 +93,6 @@ const UpdateDevice = () => {
               <div className="update-list__input-id">
                 <p>Mã thiết bị</p>
                 <Input
-                  style={{ width: 500 }}
                   value={ma_thiet_bi}
                   onChange={(e) => setMaThietBi(e.target.value)}
                   placeholder="Nhập mã thiết bị"
@@ -102,7 +101,6 @@ const UpdateDevice = () => {
               <div className="update-list__input-name">
                 <p>Tên thiết bị</p>
                 <Input
-                  style={{ width: 500 }}
                   value={ten_thiet_bi}
                   onChange={(e) => setTenThietBi(e.target.value)}
                   placeholder="Nhập tên thiết bị"
@@ -111,7 +109,6 @@ const UpdateDevice = () => {
               <div className="update-list__input-name">
                 <p>Địa chỉ IP</p>
                 <Input
-                  style={{ width: 500 }}
                   value={dia_chi_IP}
                   disabled
                   placeholder="Nhập địa chỉ IP"
@@ -137,7 +134,6 @@ const UpdateDevice = () => {
               <div className="update-list__input-user_name">
                 <p>Tên đăng nhập</p>
                 <Input
-                  style={{ width: 500 }}
                   value={ten_dang_nhap}
                   onChange={(e) => setTenDangNhap(e.target.value)}
                   placeholder="Nhập tài khoản"
@@ -145,8 +141,7 @@ const UpdateDevice = () => {
               </div>
               <div className="update-list__input-password">
                 <p>Mật khẩu</p>
-                <Input.Password
-                  style={{ width: 500 }}
+                <Input
                   value={mat_khau}
                   onChange={(e) => e.target.value}
                   placeholder="Nhập mật khẩu"

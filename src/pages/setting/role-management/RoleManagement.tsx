@@ -29,7 +29,7 @@ interface role{
 const RoleManagement = () => {
     const [role_management, setRoleManagement] = useState<role[]>([]);
     const [role_show, setRoleManagementShow] = useState<role[]>([]);
-    const starCountRef = ref(database, "setting/role");
+    const starCountRef = ref(database, "role");
     const [searchInput, setSearchInput] = useState("");
 
     const handleSearch = (value: string) => {
