@@ -1,10 +1,24 @@
 import React from 'react'
 import { Row, Col, Input, Button, Checkbox } from 'antd'
 import "./AddRoleManagement.css"
+import { useNavigate } from 'react-router-dom'
 
 
 const AddRoleManagement = () => {
     const { TextArea } = Input;
+    const navigate = useNavigate();
+
+    const handleCancel = () => {
+        navigate("/role_management");
+    };
+
+    const checkNull = () => {
+    }
+    
+    const handleSave = () => {
+
+    }
+    
     return (
         <Row className="add-role_page">
             <Col className="add-role_management">
@@ -84,8 +98,8 @@ const AddRoleManagement = () => {
                     </div>
                 </div>
                 <div className="add-role_form-button">
-                    <Button className="add-role_form-button-cancel">Hủy bỏ</Button>
-                    <Button className="add-role_form-button-save">Thêm</Button>
+                    <Button className="add-role_form-button-cancel" onClick={handleCancel}>Hủy bỏ</Button>
+                    <Button className="add-role_form-button-save" onClick={handleSave}>Thêm</Button>
                 </div>                                
             </Col>
         </Row>

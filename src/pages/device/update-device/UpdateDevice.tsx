@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { Row, Col } from "antd";
 import "./UpdateDevice.css";
 import { useParams } from "react-router-dom";
-import { Space, Select, Input, Button } from "antd";
+import { Space, Select, Input, Button, Tag} from "antd";
 import { ref, get, set } from "firebase/database";
 import database from "../../../firebase/FireBase";
 import { useNavigate } from "react-router-dom";
+import type { CustomTagProps } from 'rc-select/lib/BaseSelect';
 
 interface device {
   Ma_thiet_bi: string;
@@ -76,6 +77,15 @@ const UpdateDevice = () => {
       navigate("/device");
     });
   };
+
+  // const convertTextToTags = (text:any) => {
+  //   const segments = text.split(',');
+  //   return segments.map((segment:any, index:any) => (
+  //     <Tag key={index}>{segment.trim()}</Tag>
+  //   ));
+  // };
+
+
 
   return (
     <Row className="update-device-page">
@@ -151,11 +161,11 @@ const UpdateDevice = () => {
           </div>
           <div className="update-list__input-service">
             <p>Dịch vụ sử dụng</p>
-            <Input
-              value={dich_vu_su_dung}
+            <Input.TextArea
+              value={dich_vu_su_dung }
               onChange={(e) => setDichVuSuDung(e.target.value)}
               placeholder="Nhập dịch vụ sử dụng"
-            ></Input>
+            ></Input.TextArea>
           </div>
           <h5>* Là trường thông tin bắt buộc</h5>
         </div>

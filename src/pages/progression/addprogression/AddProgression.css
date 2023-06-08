@@ -73,3 +73,29 @@
     color: #FF9138;
     border: 1px solid #FF9138;
 }
+
+.custom-modal {
+    text-align: center;
+}
+
+.custom-modal h2{
+    color: #535261;
+    margin: 0;
+}
+
+.custom-modal h1{
+    color: #FF7506;
+    margin: 0;
+}
+
+.custom-modal  h4{
+    color: #535261;
+    padding-bottom: 10px;
+}
+
+.custom-modal .date-time{
+    background-color: #FF9138;
+    color: #ffff;
+    padding: 10px 0 10px 0;
+    font-weight: bold;  
+}

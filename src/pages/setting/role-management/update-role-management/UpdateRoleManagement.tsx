@@ -1,9 +1,22 @@
 import React from 'react'
 import "./UpdateRoleManagement.css"
 import { Row, Col, Input, Button, Checkbox } from 'antd'
+import { useNavigate } from 'react-router-dom'
 
 const UpdateRoleManagement = () => {
     const { TextArea } = Input;
+    const navigate = useNavigate();
+
+    const handleCancel = () => {
+        navigate("/role_management");
+    };
+
+    const checkNull = () => {
+    }
+    
+    const handleSave = () => {
+
+    }
     return (
         <Row className="update-role_page">
             <Col className="update-role_management">
@@ -83,8 +96,8 @@ const UpdateRoleManagement = () => {
                     </div>
                 </div>
                 <div className="update-role_form-button">
-                    <Button className="update-role_form-button-cancel">Hủy bỏ</Button>
-                    <Button className="update-role_form-button-save">Thêm</Button>
+                    <Button className="update-role_form-button-cancel" onClick={handleCancel}>Hủy bỏ</Button>
+                    <Button className="update-role_form-button-save" onClick={handleSave}>Thêm</Button>
                 </div>                                
             </Col>
         </Row>

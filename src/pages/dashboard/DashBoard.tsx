@@ -37,6 +37,7 @@ const PickerWithType = ({
 const DashBoard = () => {
   const [dataChart, setDataChart] = React.useState([0, 0, 0, 0, 0, 0, 0]);
   const [type, setType] = useState<PickerType>("date");
+
   const data = [
     {
       name: "Số thứ tự đã cấp",

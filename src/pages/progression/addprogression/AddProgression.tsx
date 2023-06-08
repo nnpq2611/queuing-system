@@ -5,6 +5,7 @@ import { Button } from 'antd';
 import { useState } from 'react';
 import database from '../../../firebase/FireBase';
 import { get, ref } from 'firebase/database';
+import { useNavigate } from 'react-router-dom';
 
 interface progression {
     So_thu_tu: number;
@@ -24,6 +25,11 @@ const AddProgression = () => {
     const [progression, setProgression] = useState<progression[]>([]);
     const [progression_show, setProgression_show] = useState<progression[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate();
+    
+    const handleComeBack = () => {
+        navigate("/progression");
+    };    
 
     const showModal = () => {
         setIsModalOpen(true);
@@ -61,8 +67,8 @@ const AddProgression = () => {
         <Row className='add-progression-page'>
             <Col className='add-progression'>
                 <div className='nav-add'>
-                    <h3 className='pro'>Thiết bị &gt; </h3>
-                    <h3 className='pro'>Danh sách thiết bị &gt; </h3>
+                    <h3 className='pro'>Cấp số &gt; </h3>
+                    <h3 className='pro'>Danh sách cấp số &gt; </h3>
                     <h3 className='add-pro'>Cấp số mới</h3>
                 </div>
                 <h2> Quản lý cấp số</h2>
@@ -87,7 +93,7 @@ const AddProgression = () => {
                         />
                     </Space>
                     <div className='add-list__button'>
-                        <Button className='add-list__button-cancel' >Hủy bỏ</Button>
+                        <Button className='add-list__button-cancel' onClick={handleComeBack}>Hủy bỏ</Button>
                         <Button className='add-list__button-add-progression' onClick={showModal} >In số</Button>
                     </div>
                 </div>
@@ -96,9 +102,15 @@ const AddProgression = () => {
                     onCancel={handleCancel}
                     footer={null}
                     className="custom-modal"
-                    width={480}
+                    width={400}
                 >                    
                     <h2>Số thứ tự được cấp</h2>
+                    <h1>2001201</h1>
+                    <h4>DV: Khám răng hàm mặt (tại quầy số 1)</h4>
+                    <div className='date-time'>
+                        <p>Thời gian cấp: 09:30 11/10/2021</p>
+                        <p>Hạn sử dụng: 10:30 11/10/2021</p>
+                    </div>
                     
 
                 </Modal>
