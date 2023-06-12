@@ -100,15 +100,15 @@ const UpdateService = () => {
                     </div>
                     <div className="update-list-number">
                         <div className="update-list-number1">
-                        <Input/>
+                        <Input disabled/>
                         <p>đến</p>
-                        <Input/>
+                        <Input disabled/>
                         </div>
                         <div className="update-list-number1">
-                        <Input/>
+                        <Input disabled/>
                         </div>
                         <div className="update-list-number1">
-                        <Input/>
+                        <Input disabled/>
                         </div>
                     </div>
                     </div>

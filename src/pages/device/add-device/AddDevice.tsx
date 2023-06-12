@@ -139,7 +139,7 @@ const AddDevice = () => {
               </div>
               <div className="add-list__input-password">
                 <p>Mật khẩu</p>
-                <Input
+                <Input.Password
                   placeholder="Nhập mật khẩu"
                   onChange={(e) => setMatKhau(e.target.value)}
                 />

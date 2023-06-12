@@ -78,12 +78,12 @@ const UpdateDevice = () => {
     });
   };
 
-  // const convertTextToTags = (text:any) => {
-  //   const segments = text.split(',');
-  //   return segments.map((segment:any, index:any) => (
-  //     <Tag key={index}>{segment.trim()}</Tag>
-  //   ));
-  // };
+  const convertTextToTags = (text:any) => {
+    const segments = text.split(',');
+    return segments.map((segment:any, index:any) => (
+      <Tag key={index}>{segment.trim()}</Tag>
+    ));
+  };
 
 
 
@@ -151,7 +151,7 @@ const UpdateDevice = () => {
               </div>
               <div className="update-list__input-password">
                 <p>Mật khẩu</p>
-                <Input
+                <Input.Password
                   value={mat_khau}
                   onChange={(e) => e.target.value}
                   placeholder="Nhập mật khẩu"
@@ -165,7 +165,8 @@ const UpdateDevice = () => {
               value={dich_vu_su_dung }
               onChange={(e) => setDichVuSuDung(e.target.value)}
               placeholder="Nhập dịch vụ sử dụng"
-            ></Input.TextArea>
+            >
+            </Input.TextArea>
           </div>
           <h5>* Là trường thông tin bắt buộc</h5>
         </div>

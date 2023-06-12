@@ -3,7 +3,6 @@ import { Row, Col } from "antd";
 import "./UpdateAccountManagement.css";
 import { Space, Select, Input, Button } from "antd";
 import { ref, set, get } from "firebase/database";
-
 import database from "../../../../firebase/FireBase";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -72,13 +71,10 @@ const UpdateAccountManagement = () => {
   const getRole = () => {
     get(starCountRefRole).then((snapshot) => {
       if (snapshot.exists()) {
-        const data = snapshot.val();
-        data.map((item: any) => {
-          setRole([
-            ...role_account,
-            { label: item.Ten_vai_tro, value: item.Ten_vai_tro },
-          ]);
-        });
+        setRole(snapshot.val());
+        // return unique value
+        const ten_vai_tro = snapshot.val().map((item: any) => item.Ten_vai_tro).filter((value: any, index: any, self: any) => self.indexOf(value) === index);
+        setRole(ten_vai_tro.map((item: any) => ({value: item, label: item})));
       } else {
         console.log("No data available");
       }
@@ -149,10 +145,11 @@ const UpdateAccountManagement = () => {
                 <p>Vai trò</p>
                 <Space wrap>
                   <Select
+                    defaultValue="Chọn vai trò"
                     style={{ width: 500 }}
                     value={ten_vai_tro}
                     onChange={(value) => setTenVaiTro(value)}
-                    options={role_account}
+                    options={[...role_account]}
                   />
                 </Space>
               </div>
@@ -187,11 +184,11 @@ const UpdateAccountManagement = () => {
                 <p>Trạng thái</p>
                 <Space wrap>
                   <Select
+                    defaultValue="Chọn trạng thái"
                     style={{ width: 500 }}
                     value={trang_thai}
                     onChange={(value) => setTrangThai(value)}
                     options={[
-                      { value: "Tất cả", label: "Tất cả" },
                       { value: true, label: "Hoạt động" },
                       { value: false, label: "Ngưng hoạt động" },
                     ]}

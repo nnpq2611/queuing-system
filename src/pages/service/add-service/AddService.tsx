@@ -12,6 +12,8 @@ interface service {
       Ten_dich_vu: string,
       Mo_ta: string,
       Trang_thai_hoat_dong: string,
+      Thoi_gian_cap: string,
+      Han_su_dung: string,
   },
   Quy_tac_cap_so: {
       Tang_tu_dong: {
@@ -30,11 +32,10 @@ const AddService = () => {
   const [mo_ta, setMoTa] = useState("");
   const [tang_start, setStart] = useState<number>();
   const [tang_end, setEnd] = useState<number>();
-  const [prefix, setPrefix] = useState("");
-  const [surfix, setSurfix] = useState("");
+  const [prefix, setPrefix] = useState<number>();
+  const [surfix, setSurfix] = useState<number>();
   const [reset, setReset] = useState<boolean>();
   const [service, setService] = useState<service[]>([]);
-  const [service_show, setService_show] = useState<service[]>([]);
   const starCountRef = ref(database, "service");
   const { TextArea } = Input;
   const navigate = useNavigate();
@@ -57,10 +58,53 @@ const AddService = () => {
     navigate("/service");
   };
 
-  const handleSave = () => {
-   
+  const checkNull = () => {
+    return (
+      ma_dich_vu === "" ||
+      ten_dich_vu === "" ||
+      mo_ta === ""
+    );
   };
 
+  const handleSave = () => {
+    if (!checkNull()) {
+      alert("Nhập thiếu thông tin!!!");
+      return;
+    }
+    let newService = {
+      Ma_dich_vu: `${ma_dich_vu}`,
+      Ten_dich_vu: `${ten_dich_vu}`,
+      Mo_ta: `${mo_ta}`,
+      Trang_thai_hoat_dong: "Hoạt động",
+      Thoi_gian_cap: `${new Date().toLocaleString()}`,
+      Han_su_dung: `${new Date().toLocaleString()}`,
+      Quy_tac_cap_so: {
+        Tang_tu_dong: {
+          Start: tang_start,
+          End: tang_end,
+        },
+        Prefix: `${prefix}`,
+        Surfix: `${surfix}`,
+        Reset: reset,
+      },
+       
+    };
+    set(starCountRef, [...service, newService]).then(() => navigate("/service"));   
+  };
+
+  useEffect(() => {
+    get(starCountRef)
+      .then((snapshot: any) => {
+        if (snapshot.exists()) {
+          setService(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      })
+      .catch((error: any) => {
+        console.error(error);
+      });
+}, []);
 
   return (
     <Row className="add-service-page">
@@ -102,15 +146,15 @@ const AddService = () => {
               </div>
               <div className="add-list-number">
                 <div className="add-list-number1">
-                  <Input/>
+                  <Input disabled/>
                   <p>đến</p>
-                  <Input/>
+                  <Input disabled/>
                 </div>
                 <div className="add-list-number1">
-                  <Input/>
+                  <Input disabled/>
                 </div>
                 <div className="add-list-number1">
-                  <Input/>
+                  <Input disabled/>
                 </div>
               </div>
             </div>

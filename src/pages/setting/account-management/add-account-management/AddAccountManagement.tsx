@@ -85,14 +85,11 @@ const AddAccountManagement = () => {
   const getRole = () => {
     get(starCountRefRole).then((snapshot) => {
       if (snapshot.exists()) {
-        const data = snapshot.val();
-        data.map((item: any) => {
-          setRole([
-            ...role_account,
-            { label: item.Ten_vai_tro, value: item.Ten_vai_tro },
-          ]);
-        });
-      } else {
+        setRole(snapshot.val());
+        // return unique value
+        const ten_vai_tro = snapshot.val().map((item: any) => item.Ten_vai_tro).filter((value: any, index: any, self: any) => self.indexOf(value) === index);
+        setRole(ten_vai_tro.map((item: any) => ({value: item, label: item})));
+    } else {
         console.log("No data available");
       }
     });
@@ -152,7 +149,7 @@ const AddAccountManagement = () => {
                     onChange={(value) => {
                       setTenVaiTro(value);
                     }}
-                    options={role_account}
+                    options={[...role_account]}
                   />
                 </Space>
               </div>

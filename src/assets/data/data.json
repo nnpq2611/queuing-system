@@ -116,6 +116,35 @@
                     }
                 ]
             }
+        },
+        {
+            "Ten_vai_tro": "Bác sĩ",
+            "So_nguoi_dung": 6,
+            "Mo_ta": "Khám chữa bệnh cho bệnh nhân",
+            "Phan_quyen": {
+                "A": [
+                    {
+                        "Chuc_nang_x": "true"
+                    },
+                    {
+                        "Chuc_nang_y": "true"
+                    },
+                    {
+                        "Chuc_nang_z": "true"
+                    }
+                ],
+                "B": [
+                    {
+                        "Chuc_nang_x": "true"
+                    },
+                    {
+                        "Chuc_nang_y": "true"
+                    },
+                    {
+                        "Chuc_nang_z": "true"
+                    }
+                ]
+            }
         }
     ],
     "account": [
