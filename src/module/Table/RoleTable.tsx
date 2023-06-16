@@ -48,7 +48,6 @@ const RoleTable: React.FC<{ role_show: role[] }> = ({ role_show }) => {
           extend: false,
         }));
         setDataShow(devices.slice(0, 10));
-        console.log(dataShow)
       }, [role_show]);
     
       const selectPage = (page: any) => {

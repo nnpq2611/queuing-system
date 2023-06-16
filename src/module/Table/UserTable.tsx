@@ -37,7 +37,6 @@ const UserTable: React.FC<{ user_show: user[] }> = ({ user_show }) =>  {
           extend: false,
         }));
         setDataShow(users.slice(0, 10));
-        console.log(dataShow)
       }, [user_show]);
     
       const selectPage = (page: any) => {

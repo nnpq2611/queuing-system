@@ -38,7 +38,6 @@ const DetailSerTable: React.FC<{ progression_show: progression[] }> = ({ progres
           extend: false,
         }));
         setDataShow(devices.slice(0, 10));
-        console.log(dataShow)
     }, [progression_show]);
     
     const selectPage = (page: any) => {

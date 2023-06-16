@@ -29,7 +29,6 @@ const DetailProgression = () => {
       .then((snapshot: any) => {
         if (snapshot.exists()) {
           setProgression(snapshot.val());
-          console.log(snapshot.val());
         } else {
           console.log("No data available");
         }

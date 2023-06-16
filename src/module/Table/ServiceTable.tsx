@@ -58,7 +58,6 @@ const ServiceTable: React.FC<{ service_show: service[] }> = ({ service_show }) =
           extend: false,
         }));
         setDataShow(devices.slice(0, 10));
-        console.log(dataShow)
       }, [service_show]);
     
       const selectPage = (page: any) => {
