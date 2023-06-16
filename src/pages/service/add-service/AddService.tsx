@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col } from "antd";
-import './AddService.css'
+import { Row, Col, InputNumber } from "antd";
+import "./AddService.css";
 import { Checkbox, Input, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { get, ref, set } from "firebase/database";
@@ -8,33 +8,36 @@ import database from "../../../firebase/FireBase";
 
 interface service {
   Thong_tin_dich_vu: {
-      Ma_dich_vu: string,
-      Ten_dich_vu: string,
-      Mo_ta: string,
-      Trang_thai_hoat_dong: string,
-      Thoi_gian_cap: string,
-      Han_su_dung: string,
-  },
+    Ma_dich_vu: string;
+    Ten_dich_vu: string;
+    Mo_ta: string;
+    Trang_thai_hoat_dong: string;
+    Thoi_gian_cap: string;
+    Han_su_dung: string;
+  };
   Quy_tac_cap_so: {
-      Tang_tu_dong: {
-          Start: number,
-          End: number,
-      },
-      Prefix: number,
-      Surfix: number,
-      Reset: boolean,
-  }
+    Tang_tu_dong: {
+      Start: string;
+      End: string;
+    };
+    Prefix: string;
+    Surfix: string;
+    Reset: boolean;
+  };
 }
 
 const AddService = () => {
   const [ma_dich_vu, setMaDichVu] = useState("");
   const [ten_dich_vu, setTenDichVu] = useState("");
   const [mo_ta, setMoTa] = useState("");
-  const [tang_start, setStart] = useState<number>();
-  const [tang_end, setEnd] = useState<number>();
-  const [prefix, setPrefix] = useState<number>();
-  const [surfix, setSurfix] = useState<number>();
-  const [reset, setReset] = useState<boolean>();
+  const [tang_start, setStart] = useState("0000");
+  const [tang_end, setEnd] = useState("9999");
+  const [prefix, setPrefix] = useState("0001");
+  const [surfix, setSurfix] = useState("9999");
+  const [reset, setReset] = useState<boolean>(false);
+  const [typePrefix, setTypePrefix] = useState(false);
+  const [typeSurfix, setTypeSurfix] = useState(false);
+  const [typeAuto, setTypeAuto] = useState(false);
   const [service, setService] = useState<service[]>([]);
   const starCountRef = ref(database, "service");
   const { TextArea } = Input;
@@ -59,37 +62,36 @@ const AddService = () => {
   };
 
   const checkNull = () => {
-    return (
-      ma_dich_vu === "" ||
-      ten_dich_vu === "" ||
-      mo_ta === ""
-    );
+    return ma_dich_vu === "" || ten_dich_vu === "" || mo_ta === "";
   };
 
   const handleSave = () => {
-    if (!checkNull()) {
+    if (checkNull()) {
       alert("Nhập thiếu thông tin!!!");
       return;
     }
     let newService = {
-      Ma_dich_vu: `${ma_dich_vu}`,
-      Ten_dich_vu: `${ten_dich_vu}`,
-      Mo_ta: `${mo_ta}`,
-      Trang_thai_hoat_dong: "Hoạt động",
-      Thoi_gian_cap: `${new Date().toLocaleString()}`,
-      Han_su_dung: `${new Date().toLocaleString()}`,
+      Thong_tin_dich_vu: {
+        Ma_dich_vu: `${ma_dich_vu}`,
+        Ten_dich_vu: `${ten_dich_vu}`,
+        Mo_ta: `${mo_ta}`,
+        Trang_thai_hoat_dong: "Hoạt động",
+        Thoi_gian_cap: `${new Date().toLocaleString()}`,
+        Han_su_dung: `${new Date().toLocaleString()}`,
+      },
       Quy_tac_cap_so: {
         Tang_tu_dong: {
-          Start: tang_start,
-          End: tang_end,
+          Start: typeAuto ? tang_start : "",
+          End: typeAuto ? tang_end : "",
         },
-        Prefix: `${prefix}`,
-        Surfix: `${surfix}`,
+        Prefix: typePrefix ? prefix : "",
+        Surfix: typeSurfix ? surfix : "",
         Reset: reset,
       },
-       
     };
-    set(starCountRef, [...service, newService]).then(() => navigate("/service"));   
+    set(starCountRef, [...service, newService]).then(() =>
+      navigate("/service")
+    );
   };
 
   useEffect(() => {
@@ -104,7 +106,7 @@ const AddService = () => {
       .catch((error: any) => {
         console.error(error);
       });
-}, []);
+  }, []);
 
   return (
     <Row className="add-service-page">
@@ -116,7 +118,7 @@ const AddService = () => {
         </div>
         <h2> Quản lý dịch vụ</h2>
         <div className="add-list">
-          <div className="add-list-ser"> 
+          <div className="add-list-ser">
             <div className="add-list-input">
               <h3>Thông tin dịch vụ</h3>
               <div className="add-list-id">
@@ -139,22 +141,65 @@ const AddService = () => {
             <div className="add-list-rule-number">
               <div className="add-list-rule">
                 <h3>Quy tắc cấp số</h3>
-                <div className="add-list-rule1"><Checkbox/> <p>Tăng tự động từ</p></div>
-                <div className="add-list-rule1"><Checkbox/> <p>Prefix</p></div>
-                <div className="add-list-rule1"><Checkbox/> <p>Surfix</p></div>
-                <div className="add-list-rule1"><Checkbox/> <p>Reset mỗi ngày</p></div>               
+                <div className="add-list-rule1">
+                  <Checkbox
+                    checked={typeAuto}
+                    onChange={() => setTypeAuto(!typeAuto)}
+                  />{" "}
+                  <p>Tăng tự động từ</p>
+                </div>
+                <div className="add-list-rule1">
+                  <Checkbox
+                    checked={typePrefix}
+                    onChange={() => setTypePrefix(!typePrefix)}
+                  />{" "}
+                  <p>Prefix</p>
+                </div>
+                <div className="add-list-rule1">
+                  <Checkbox
+                    checked={typeSurfix}
+                    onChange={() => setTypeSurfix(!typeSurfix)}
+                  />{" "}
+                  <p>Surfix</p>
+                </div>
+                <div className="add-list-rule1">
+                  <Checkbox onChange={() => setReset(!reset)} />
+                  <p>Reset mỗi ngày</p>
+                </div>
               </div>
               <div className="add-list-number">
                 <div className="add-list-number1">
-                  <Input disabled/>
+                  <Input
+                    value={tang_start}
+                    disabled={!typeAuto}
+                    onChange={(e) =>
+                      setStart(e.target.value.replace(/\D/g, ""))
+                    }
+                  />
                   <p>đến</p>
-                  <Input disabled/>
+                  <Input
+                    value={tang_end}
+                    disabled={!typeAuto}
+                    onChange={(e) => setEnd(e.target.value.replace(/\D/g, ""))}
+                  />
                 </div>
                 <div className="add-list-number1">
-                  <Input disabled/>
+                  <Input
+                    value={prefix}
+                    disabled={!typePrefix}
+                    onChange={(e) =>
+                      setPrefix(e.target.value.replace(/\D/g, ""))
+                    }
+                  />
                 </div>
                 <div className="add-list-number1">
-                  <Input disabled/>
+                  <Input
+                    value={surfix}
+                    disabled={!typeSurfix}
+                    onChange={(e) =>
+                      setSurfix(e.target.value.replace(/\D/g, ""))
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -162,15 +207,16 @@ const AddService = () => {
           </div>
           <div className="add-list_form-description">
             <p>Mô tả</p>
-            <TextArea 
+            <TextArea
               className="form-control"
               style={{ width: 500, height: 110 }}
               placeholder="Nhập mô tả"
-              rows={4} 
-              maxLength={6} 
-            />  
-          </div>           
-        </div> 
+              rows={4}
+              maxLength={6}
+              onChange={(e) => setMoTa(e.target.value)}
+            />
+          </div>
+        </div>
         <div className="add-list__button">
           <Button className="add-list__button-cancel" onClick={handleCancel}>
             Hủy bỏ
@@ -181,7 +227,7 @@ const AddService = () => {
         </div>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
-export default AddService
+export default AddService;

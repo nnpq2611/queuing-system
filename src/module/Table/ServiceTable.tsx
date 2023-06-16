@@ -12,11 +12,11 @@ interface service {
     },
     Quy_tac_cap_so: {
         Tang_tu_dong: {
-            Start: number,
-            End: number,
+            Start: string,
+            End: string,
         },
-        Prefix: number,
-        Surfix: number,
+        Prefix: string,
+        Surfix: string,
         Reset: boolean,
     }
 }

@@ -35,11 +35,11 @@
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
-                    "Start": 1,
-                    "End": 99999
+                    "Start":"0001",
+                    "End": "9999"
                 },
-                "Prefix": 1,
-                "Surfix": 1,
+                "Prefix": "0001",
+                "Surfix": "0001",
                 "Reset": true
             }
         },
@@ -54,11 +54,11 @@
             },
             "Quy_tac_cap_so": {
                 "Tang_tu_dong": {
-                    "Start": 1,
-                    "End": 99999
+                    "Start": "0001",
+                    "End": "9999"
                 },
-                "Prefix": 1,
-                "Surfix": 0,
+                "Prefix": "0001",
+                "Surfix": "0001",
                 "Reset": false
             }
         }
