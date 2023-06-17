@@ -212,7 +212,6 @@ const AddService = () => {
               style={{ width: 500, height: 110 }}
               placeholder="Nhập mô tả"
               rows={4}
-              maxLength={6}
               onChange={(e) => setMoTa(e.target.value)}
             />
           </div>

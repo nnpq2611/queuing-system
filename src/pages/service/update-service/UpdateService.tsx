@@ -220,7 +220,6 @@ const UpdateService = () => {
               value={mo_ta}
               onChange={(e) => setMoTa(e.target.value)}
               rows={4}
-              maxLength={6}
             />
           </div>
         </div>

@@ -98,6 +98,7 @@ const AddDevice = () => {
               <div className="add-list__input-id">
                 <p>Mã thiết bị</p>
                 <Input
+                  style={{ width: 550 }}
                   placeholder="Nhập mã thiết bị"
                   onChange={(e) => setMaThietBi(e.target.value)}
                 />
@@ -105,13 +106,14 @@ const AddDevice = () => {
               <div className="add-list__input-name">
                 <p>Tên thiết bị</p>
                 <Input
+                  style={{ width: 550 }}
                   placeholder="Nhập tên thiết bị"
                   onChange={(e) => setTenThietBi(e.target.value)}
                 />
               </div>
               <div className="add-list__input-name">
                 <p>Địa chỉ IP</p>
-                <Input value={dia_chi_IP} disabled />
+                <Input style={{ width: 550 }} value={dia_chi_IP} disabled />
               </div>
             </div>
             <div className="add-list__input-account">
@@ -119,7 +121,7 @@ const AddDevice = () => {
                 <p>Loại thiết bị</p>
                 <Space wrap>
                   <Select
-                    style={{ width: 500 }}
+                    style={{ width: 550 }}
                     onChange={(value) => setLoaiThietBi(value)}
                     defaultValue="Chọn loại thiết bị"
                     options={[
@@ -133,6 +135,7 @@ const AddDevice = () => {
               <div className="add-list__input-user_name">
                 <p>Tên đăng nhập</p>
                 <Input
+                  style={{ width: 550 }}
                   placeholder="Nhập tài khoản"
                   onChange={(e) => setTenDangNhap(e.target.value)}
                 />
@@ -140,6 +143,7 @@ const AddDevice = () => {
               <div className="add-list__input-password">
                 <p>Mật khẩu</p>
                 <Input.Password
+                  style={{ width: 550 }}
                   placeholder="Nhập mật khẩu"
                   onChange={(e) => setMatKhau(e.target.value)}
                 />
